@@ -1,0 +1,23 @@
+.clearfix {
+  clear: both; }
+
+header {
+  display: flex;
+  justify-content: space-between; }
+  header img {
+    max-height: 100px; }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px; }
+  main .login-box {
+    width: 50%;
+    height: 50%;
+    background-color: black; }
+
+.about-box {
+  display: none; }
+
+/*# sourceMappingURL=base.css.map */
