@@ -1,9 +1,15 @@
 // Your Client ID can be retrieved from your project in the Google
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '3140915015-h40rmmh8e4vnl2lc11v8m9od9kl7p819.apps.googleusercontent.com';
-
+var apiKey = 'AIzaSyAV37ObKQpOAVTkfHT_pU7fz6t5D6fGMXU';
 var SCOPES = ['https://mail.google.com/', 'https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapis.com/auth/gmail.compose', 'https://www.googleapis.com/auth/gmail.send'];
 
+
+
+function HandleClientLoad() {
+  gapi.client.setApiKey(apiKey);
+  window.setTimeout(checkAuth,1);
+}
 /**
 * Check if current user has authorized this application.
 */
@@ -51,21 +57,24 @@ function checkAuth() {
     * is loaded.
     */
     function loadGmailApi() {
-      gapi.client.load('gmail', 'v1', sendMessage('me', "hello there", responseData));
-    }
+      gapi.client.load('gmail', 'v1', function() {
+        var base64EncodedEmail = btoa( "Content-Type: text/plain; charset=\"UTF-8\"\n" +
+       "MIME-Version: 1.0\n" +
+       "Content-Transfer-Encoding: 7bit\n" +
+       "to: phillip.d.nguyen23@gmail.com\n" +
+       "from: sender@gmail.com\n" +
+       "subject: Subject Text\n\n" +
 
-
-    function sendMessage(userId, message, callback) {
-      var base64EncodedEmail = btoa(message);
-      var request = gapi.client.gmail.users.messages.send({
-        'userId': userId,
-        'messsage': {
-          'raw': base64EncodedEmail
-        }
+       "hello world"
+       ).replace(/\+/g, '-').replace(/\//g, '_');
+        var request = gapi.client.gmail.users.messages.send({
+          'userId': 'info.preparedfordisaster@gmail.com',
+          'resource': {
+            'raw': base64EncodedEmail
+          }
       });
-      request.execute(callback);
-    }
-
-    function responseData(resp) {
-      console.log(resp);
-    }
+      request.execute(function(resp) {
+        console.log(resp);
+      });
+    });
+  }
