@@ -1,5 +1,13 @@
-(function(module) {
-  page('/login',
-);
+page('/',
+  controller.landing);
 
-})(window);
+page('/login',
+  controller.login);
+
+page('/register',
+  controller.register);
+
+page('/home',
+  controller.homepage);
+
+page();

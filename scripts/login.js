@@ -5,9 +5,9 @@
 
   login.register = function(e) {
     e.preventDefault();
-    var $email = $('#user-name').val();
-    var $password = $('#password').val();
-    $('#login-form').trigger('reset');
+    var $email = $('#register-user-name').val();
+    var $password = $('#register-password').val();
+    $('#register-form').trigger('reset');
 
     ref.createUser({
       email: $email,
@@ -24,15 +24,21 @@
           alert('Please enter a valid email.');
           break;
         }
+      } else {
+        login.index();
+        // page('/home');
       }
     });
   };
 
   login.newLogin = function(e) {
     e.preventDefault();
-    var $email = $('#user-name').val();
-    var $password = $('#password').val();
+    console.log('here');
+    var $email = $('#login-user-name').val();
+    var $password = $('#login-password').val();
+    console.log('here');
     $('#login-form').trigger('reset');
+    console.log('here');
 
     ref.authWithPassword({
       'email': $email,
@@ -41,13 +47,22 @@
       if (error) {
         alert('Login error');
       } else {
-        module.userData = authData;
+        userData = authData;
+        module.userData = userData;
+        console.log(userData);
+        login.index();
+        // page('/home');
       }
     });
   };
 
-  // $('#register').on('click',login.register);
-  // $('#login').on('click',login.newLogin);
+  login.index = function() {
+    page('/home');
+  };
+
+  $('#register').on('click',login.register);
+
+  $('#login').on('click',login.newLogin);
 
 
   module.login = login;

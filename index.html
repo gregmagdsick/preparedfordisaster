@@ -16,15 +16,42 @@
       </nav>
     </header>
     <main>
-      <section class="login-box">
-
+      <section id="landing-page">
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      </section>
+      <section id="login-page">
+        <form id="login-form">
+          <input id="login-user-name" type="text" placeholder="User Name" />
+          <input id="login-password" type="password" placeholer="password" />
+          <button type="submit" id="login">Login</button>
+        </form>
+      </section>
+      <section id="register-page">
+        <form id="register-form">
+          <input id="first-name" type="text" placeholder="First Name" />
+          <input id="last-name" type="text" placeholder="Last Name" />
+          <input id="register-user-name" type="text" placeholder="User Name" />
+          <input id="register-password" type="password" />
+          <button type="submit" id="register">Register</button>
+        </form>
       </section>
       <section class="about-box">
 
+      </section>
+      <section id="homepage">
+        <h1>HOMEPAGE</h1>
       </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.6.4/page.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+
+    <script src="scripts/login.js"></script>
+    <script src="scripts/userData.js"></script>
+    <script src="scripts/controller.js"></script>
+
+    <script src="scripts/routes.js"></script>
   </body>
 </html>
