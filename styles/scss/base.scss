@@ -1,0 +1,31 @@
+.clearfix {
+  clear: both;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  img {
+    max-height: 100px;
+  }
+  ul {
+
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  .login-box {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
+
+
+.about-box {
+  display: none;
+}
