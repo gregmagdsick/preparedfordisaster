@@ -1,3 +1,4 @@
 (function(module) {
+  // page('/',)
 
 })(window);
