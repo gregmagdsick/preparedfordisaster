@@ -46,8 +46,8 @@
     });
   };
 
-  $('#register').on('click',login.register);
-  $('#login').on('click',login.newLogin);
+  // $('#register').on('click',login.register);
+  // $('#login').on('click',login.newLogin);
 
 
   module.login = login;

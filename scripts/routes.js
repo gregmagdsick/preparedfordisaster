@@ -1,4 +1,5 @@
 (function(module) {
-  // page('/',)
+  page('/login',
+);
 
 })(window);
