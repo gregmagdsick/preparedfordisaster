@@ -16,18 +16,13 @@ userInput.toHtml = function(ele) {
   return template(ele);
 };
 
-// $('input:text').focus(function(e){
-//   e.preventDefault()},
-//   function(){
-//       console.log(this)
-//     $(this).val('');
-//   });
+
 $('.user-information').on('submit', function(e){
   e.preventDefault();
   var inputText = $('.user-info');
   inputText.map(function(acc, cur){
     if(this.value && this.value !== 'submit'){
-      test[this.name] = this.value;
+      CurrentUser.all[this.name] = this.value;
     }
   });
 });
@@ -35,7 +30,7 @@ $('.user-information').on('submit', function(e){
 $('.base-kit').on('submit', function(e){
   e.preventDefault();
   var checkedItems = $(':checkbox:checked');
-  checkedItems.map(function() {
-    return (this.value);
+  CurrentUser.all['userKit'] = checkedItems.map(function(acc) {
+    return this.value;
   });
 });

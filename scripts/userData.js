@@ -4,7 +4,7 @@
 
 
 // ***end delete test section***
-  CurrentUser.all = [];
+  CurrentUser.all = {};
   //creates a new object for the user with properties to match data input
   function CurrentUser(ops) {
     Object.keys(ops).forEach(function(e, index, keys) {
