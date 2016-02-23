@@ -18,6 +18,14 @@
     CurrentUser.pullData(userData.uid);
   };
 
+  controller.about = function() {
+    $('#about-box').show().siblings().hide();
+  };
+
+  controller.resources = function() {
+    $('#additional-resources').show().siblings().hide();
+  };
+
 
 
 
