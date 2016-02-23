@@ -33,3 +33,6 @@ node_modules
 .node_repl_history
 
 .eslintrc
+
+#sass map files
+*.css.map

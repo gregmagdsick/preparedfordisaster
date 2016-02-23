@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prepared for Disaster</title>
     <link rel="stylesheet" href="styles/base.css" media="screen" title="no title" charset="utf-8">
   </head>
@@ -10,21 +11,56 @@
       <img src="images/logo.png" alt="Logo" />
       <nav>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Extra Resources</a></li>
+          <li><a href="/About">About</a></li>
+          <li><a href="/Resources">Extra Resources</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="login-box">
+      <section id="landing-page">
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      </section>
+      <section id="login-page">
+        <form id="login-form">
+          <input id="login-user-name" type="text" placeholder="User Name" />
+          <input id="login-password" type="password" placeholer="password" />
+          <button type="submit" id="login">Login</button>
+        </form>
+      </section>
+      <section id="register-page">
+        <form id="register-form">
+          <input id="first-name" type="text" placeholder="First Name" />
+          <input id="last-name" type="text" placeholder="Last Name" />
+          <input id="register-user-name" type="text" placeholder="User Name" />
+          <input id="register-password" type="password" />
+          <button type="submit" id="register">Register</button>
+        </form>
+      </section>
+      <section id="about-box" class="about-box">
 
       </section>
-      <section class="about-box">
+      <section id="homepage">
+        <h1>HOMEPAGE</h1>
+      </section>
+      <section id="edit-plan">
 
+      </section>
+      <section id="additional-resources">
+        <a href="http://www.redcross.org/get-help/prepare-for-emergencies/types-of-emergencies">Red Cross Types of Emergencies</a>
+        <a href="http://www.ready.gov/">Ready.gov</a>
+        <a href="http://www.seattle.gov/emergency-management">Seattle Detp. of Emergency Management</a>
       </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.6.4/page.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+
+    <script src="scripts/login.js"></script>
+    <script src="scripts/userData.js"></script>
+    <script src="scripts/controller.js"></script>
+
+    <script src="scripts/routes.js"></script>
   </body>
 </html>
