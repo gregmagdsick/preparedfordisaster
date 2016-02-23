@@ -3,8 +3,7 @@
 
 header {
   display: flex;
-  justify-content: space-between;
-  margin: 0px 30px 30px 30px; }
+  justify-content: space-between; }
   header img {
     max-height: 100px; }
 
@@ -12,14 +11,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 500px;
-  flex-wrap: wrap; }
-  main section {
-    margin: 0px 30px 30px 30px;
-    min-width: 300px;
-    min-height: 300px;
-    width: 60%;
-    height: 60%;
+  min-height: 500px; }
+  main .login-box {
+    width: 50%;
+    height: 30px;
     background-color: rgba(0, 0, 0, 0.8); }
+
+.about-box {
+  display: none; }
 
 /*# sourceMappingURL=base.css.map */

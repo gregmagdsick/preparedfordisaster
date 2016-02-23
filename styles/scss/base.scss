@@ -1,3 +1,10 @@
+// color pallete for now: https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.7137254901960783,0.25872549019598107,0.07137254901960782,0.5137254901960784,0.2953921568626984,0.20549019607843136,0.9137254901960784,0,0,0.23112745098039214,0.9245098039215686,0.2311274509805498,0.2954491564065517,0.7137254901960783,0.07137254901960782&swatchOrder=0,1,2,3,4
+
+$margin: 0px 30px 30px 30px;
+$background-color: white;
+$text-color: black;
+
+
 .clearfix {
   clear: both;
 }
@@ -5,6 +12,7 @@
 header {
   display: flex;
   justify-content: space-between;
+  margin: $margin;
   img {
     max-height: 100px;
   }
@@ -12,20 +20,18 @@ header {
 
   }
 }
-
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 500px;
-  .login-box {
-    width: 50%;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 1);
+  flex-wrap: wrap;
+  section {
+    margin: $margin;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
   }
-}
-
-
-.about-box {
-  display: none;
 }
