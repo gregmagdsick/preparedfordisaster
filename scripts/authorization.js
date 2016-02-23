@@ -1,14 +1,13 @@
 (function(module) {
 
   var gmailAPI = {};
-
   // Your Client ID can be retrieved from your project in the Google
   // Developer Console, https://console.developers.google.com
   var CLIENT_ID = '3140915015-h40rmmh8e4vnl2lc11v8m9od9kl7p819.apps.googleusercontent.com';
   var apiKey = 'AIzaSyAV37ObKQpOAVTkfHT_pU7fz6t5D6fGMXU';
   var SCOPES = ['https://mail.google.com/', 'https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapis.com/auth/gmail.compose', 'https://www.googleapis.com/auth/gmail.send'];
 
-  var messageTemplate = "<p>Hello, <br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is the emergency kit plan for you and your family to help safeguard during imes of emergency: </p>";
+  var messageTemplate = "<p>Hello," + CurrentUser.all[0].firstname + "<br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is the emergency kit plan for you and your family to help safeguard during imes of emergency: </p>";
 
 
   gmailAPI.HandleClientLoad = function() {
@@ -33,15 +32,14 @@
     * @param {Object} authResult Authorization result.
     */
     gmailAPI.handleAuthResult = function(authResult) {
-      var authorizeDiv = document.getElementById('authorize-div');
+      var authorizeButton = $('#authorize-button');
       if (authResult && !authResult.error) {
         // Hide auth UI, then load client library.
-        authorizeDiv.style.display = 'none';
         gmailAPI.loadGmailApi();
       } else {
         // Show auth UI, allowing the user to initiate authorization by
         // clicking authorize button.
-        authorizeDiv.style.display = 'inline';
+        authorizeButton.css("display", "inline");
       }
     };
 
@@ -83,6 +81,13 @@
         });
       });
     };
+    gmailAPI.clickSend = function() {
+      $('#authorize-button').on('click', function() {
+        gmailAPI.handleAuthClick();
+      });
+    };
+
+    gmailAPI.clickSend();
 
     module.gmailAPI = gmailAPI;
   })(window);
