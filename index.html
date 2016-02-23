@@ -7,13 +7,22 @@
   <div id="authorize-div" style="display: none">
     <span>Authorize access to Gmail API</span>
     <!--Button for the user to click to initiate auth sequence -->
-    <button id="authorize-button" onclick="handleAuthClick(event)">
+    <button id="authorize-button" onclick="gmailAPI.handleAuthClick(event)">
       Authorize
     </button>
   </div>
-  <pre id="output"></pre>
+  <div>
+    <input type="text" id="emergency-plan" name="emergency-plan" size=80  value=""/>
+    <button id="send-mail"></button>
+  </div>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src='scripts/authorization.js'></script>
-  <script src="https://apis.google.com/js/client.js?onload=HandleClientLoad"></script>
+  <script src="https://apis.google.com/js/client.js?onload=gmailAPI.HandleClientLoad"></script>
+
 
 </body>
 </html>
