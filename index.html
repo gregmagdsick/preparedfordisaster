@@ -6,6 +6,7 @@
     <title>Prepared for Disaster</title>
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="styles/base.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/form-base.css">
 
     <script id="check-box-template" type="text/x-handlebars-template">
       <input type="checkbox" class='user-kit' name="{{item}}" value="{{item}}">{{item}} {{description}}<br>
@@ -60,25 +61,22 @@
         </div>
       </section>
 
-      <section id="edit-plan">
-        <h3> Personal Information </h3>
+      <section class="flexbox edit-plan" id="edit-plan">
         <form class="user-information">
-          First Name: <input class="user-info" type="text" name="firstname">
-          Last Name: <input class="user-info" type="text" name="lastname">
-          Email Address: <input class="user-info" type="text" name="email">
+          <h3> Personal Information </h3>
+          <label>First Name</label><input class="user-info" type="text" name="firstname">
+          <label>Last Name</label><input class="user-info" type="text" name="lastname">
+          <label>Email</label><input class="user-info" type="email" name="email">
+          <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
+          <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
           <h4> Address </h4>
-          <table>
-            <tr><td>Address Line 1 <input class="user-info" type="text" name="line-one"></td></tr>
-            <tr><td>Address Line 2 <input class="user-info" type="text" name="line-two"></td></tr>
-            <tr><td>City <input class="user-info" type="text" name="city"></td></tr>
-            <tr><td>State <input class="user-info" type="text" name="state"></td>
-                <td>Zip/Postal Code <input class="user-info" type="text" name="zip"></td></tr>
-          </table>
-          <input class="user-info" type="submit" value="submit">
+            <label>Address Line 1</label><input class="user-info" type="text" name="line-one">
+            <label>Address Line 2</label><input class="user-info" type="text" name="line-two">
+            <label>City</label><input class="user-info" type="text" name="city">
+            <label>State</label><input class="user-info" type="text" name="state">
+            <label>Postal Code</label><input class="user-info" type="text" name="zip">
+            <button type="submit" id="user-info" class="user-info">Submit</button>
         </form>
-
-
-
         <form class="base-kit">
         </form>
       </section>
