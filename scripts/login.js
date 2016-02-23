@@ -5,9 +5,9 @@
 
   login.register = function(e) {
     e.preventDefault();
-    var $email = $('#user-name').val();
-    var $password = $('#password').val();
-    $('#login-form').trigger('reset');
+    var $email = $('#register-user-name').val();
+    var $password = $('#register-password').val();
+    $('#register-form').trigger('reset');
 
     ref.createUser({
       email: $email,
@@ -24,14 +24,16 @@
           alert('Please enter a valid email.');
           break;
         }
+      } else {
+        page('/login');
       }
     });
   };
 
   login.newLogin = function(e) {
     e.preventDefault();
-    var $email = $('#user-name').val();
-    var $password = $('#password').val();
+    var $email = $('#login-user-name').val();
+    var $password = $('#login-password').val();
     $('#login-form').trigger('reset');
 
     ref.authWithPassword({
@@ -42,11 +44,17 @@
         alert('Login error');
       } else {
         module.userData = authData;
+        page('/home');
       }
     });
   };
 
+  login.index = function() {
+    page('/home');
+  };
+
   $('#register').on('click',login.register);
+
   $('#login').on('click',login.newLogin);
 
 
