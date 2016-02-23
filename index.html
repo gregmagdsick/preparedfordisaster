@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="styles/base.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="styles/form-base.css">
 
+
     <script id="check-box-template" type="text/x-handlebars-template">
-      <input type="checkbox" class='user-kit' name="{{item}}" value="{{item}}">{{item}} {{description}}<br>
+      <div class="flexbox">
+        <input type="checkbox" class="user-kit" id="{{item}}" name="{{item}}" value="{{item}}">
+        <label for="{{item}}" class="check-img">{{item}}</label>
+      </div>
     </script>
 
   </head>
@@ -78,6 +82,7 @@
             <button type="submit" id="user-info" class="user-info">Submit</button>
         </form>
         <form class="base-kit">
+          <h3> Emergency Kit Checklist </h3>
         </form>
       </section>
 
