@@ -4,32 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prepared for Disaster</title>
+    <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="styles/base.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <header>
+    <header class="flexbox">
       <img src="images/logo.png" alt="Logo" />
       <nav>
-        <ul>
-          <li><a href="/About">About</a></li>
-          <li><a href="/Resources">Extra Resources</a></li>
+        <ul class="flexbox">
+          <li><a href="/about">About</a></li>
+          <li><a href="/resources">Extra Resources</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="landing-page">
+      <section class="flexbox landing" id="landing-page">
         <a href="/login">Login</a>
         <a href="/register">Register</a>
       </section>
-      <section id="login-page">
-        <form id="login-form">
-          <input id="login-user-name" type="text" placeholder="User Name" />
-          <input id="login-password" type="password" placeholer="password" />
-          <button type="submit" id="login">Login</button>
+      <section class="flexbox login" id="login-page">
+        <form class="flexbox login-form" id="login-form">
+          <label>Username</label><input id="login-user-name" type="text" placeholder="User Name" />
+          <label>Password</label><input id="login-password" type="password" placeholer="password" />
+          <button type="submit" id="login">Go</button>
         </form>
       </section>
-      <section id="register-page">
-        <form id="register-form">
+      <section class="flexbox register" id="register-page">
+        <form class="flexbox register-form" id="register-form">
           <input id="first-name" type="text" placeholder="First Name" />
           <input id="last-name" type="text" placeholder="Last Name" />
           <input id="register-user-name" type="text" placeholder="User Name" />

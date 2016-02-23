@@ -10,4 +10,10 @@ page('/register',
 page('/home',
   controller.homepage);
 
+page('/about',
+  controller.about);
+
+page('/resources',
+  controller.resources);
+
 page();
