@@ -56,7 +56,7 @@ header {
     width: 60%; }
     .login .login-form label {
       display: block;
-      margin: 0 0 10px;
+      margin: 2% 0;
       color: rgba(0, 0, 0, 0.6);
       font-size: 12px;
       font-weight: 500;
@@ -92,7 +92,8 @@ header {
       font-weight: 500;
       line-height: inherit;
       text-transform: uppercase;
-      cursor: pointer; }
+      cursor: pointer;
+      margin: 2% 0; }
 
 .register {
   background-color: #ccc9c0;
