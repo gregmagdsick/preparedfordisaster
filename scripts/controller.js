@@ -9,14 +9,13 @@
     $('#login-page').show().siblings().hide();
   };
 
-  controller.register = function(ctx,next) {
+  controller.register = function() {
     $('#register-page').show().siblings().hide();
-    next();
   };
 
-  controller.homepage = function(ctx,next) {
+  controller.homepage = function() {
     $('#homepage').show().siblings().hide();
-    next();
+    CurrentUser.pullData(userData.uid);
   };
 
 

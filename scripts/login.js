@@ -25,20 +25,16 @@
           break;
         }
       } else {
-        login.index();
-        // page('/home');
+        page('/login');
       }
     });
   };
 
   login.newLogin = function(e) {
     e.preventDefault();
-    console.log('here');
     var $email = $('#login-user-name').val();
     var $password = $('#login-password').val();
-    console.log('here');
     $('#login-form').trigger('reset');
-    console.log('here');
 
     ref.authWithPassword({
       'email': $email,
@@ -47,11 +43,8 @@
       if (error) {
         alert('Login error');
       } else {
-        userData = authData;
-        module.userData = userData;
-        console.log(userData);
-        login.index();
-        // page('/home');
+        module.userData = authData;
+        page('/home');
       }
     });
   };
