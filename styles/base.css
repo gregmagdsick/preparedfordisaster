@@ -3,7 +3,8 @@
 
 header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 0px 30px 30px 30px; }
   header img {
     max-height: 100px; }
 
@@ -11,13 +12,42 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 500px; }
+  min-height: 500px;
+  flex-wrap: wrap; }
   main .login-box {
-    width: 50%;
-    height: 50%;
-    background-color: black; }
-
-.about-box {
-  display: none; }
+    margin: 0px 30px 30px 30px;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.8); }
+  main .sign-in-box {
+    margin: 0px 30px 30px 30px;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(100, 200, 100, 0.8); }
+  main .about-box {
+    margin: 0px 30px 30px 30px;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(255, 0, 0, 0.8); }
+  main .summary-page {
+    margin: 0px 30px 30px 30px;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 255, 0, 0.8); }
+  main .edit-plan {
+    margin: 0px 30px 30px 30px;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 255, 0.8); }
 
 /*# sourceMappingURL=base.css.map */
