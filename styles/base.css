@@ -1,6 +1,9 @@
 .flexbox {
   display: flex; }
 
+body {
+  background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%); }
+
 header {
   justify-content: space-between;
   align-items: center;
@@ -37,22 +40,59 @@ header {
     padding: 1%; }
 
 .login {
-  background-color: #ccc9c0;
-  border-radius: 2px;
-  justify-content: center;
-  width: 50%;
-  max-height: 275px;
-  max-width: 225px;
-  margin: 25% auto; }
+  position: relative;
+  z-index: 15;
+  background: white;
+  max-width: 600px;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 100px auto 10px;
+  overflow: hidden; }
   .login .login-form {
-    flex-direction: column;
-    justify-content: center;
-    width: 100%; }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1% auto;
+    width: 60%; }
+    .login .login-form label {
+      display: block;
+      margin: 0 0 10px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .2em; }
     .login .login-form input {
-      margin: 2% auto;
-      max-width: 80%; }
+      outline: none;
+      display: block;
+      background: rgba(0, 0, 0, 0.1);
+      width: 100%;
+      border: 0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      color: rgba(0, 0, 0, 0.6);
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 500;
+      line-height: inherit; }
+      .login .login-form input:focus {
+        color: rgba(0, 0, 0, 0.8); }
     .login .login-form button {
-      margin: 2% auto; }
+      outline: none;
+      background: #4285F4;
+      width: 100%;
+      border: 0;
+      border-radius: 4px;
+      padding: 12px 20px;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 500;
+      line-height: inherit;
+      text-transform: uppercase;
+      cursor: pointer; }
 
 .register {
   background-color: #ccc9c0;
