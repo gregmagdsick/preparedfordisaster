@@ -7,6 +7,7 @@ userInput.kitData = function() {
     userInput.all.forEach(function(ele){
       $('.base-kit').append(userInput.toHtml(ele));
     });
+    $('.base-kit').append('<input type="submit" value="submit">');
   });
 };
 
@@ -17,6 +18,9 @@ userInput.toHtml = function(ele) {
 
 $('.base-kit').on('submit', function(e){
   e.preventDefault();
-  console.log('yes');
-  console.log(this);
+  console.log('yep')
+  console.log(e)
+  ($('input.user-kit')).map(function(){
+    return $(':checkbox:checked').val();
+  });
 });
