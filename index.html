@@ -24,32 +24,34 @@
       <nav>
         <ul class="flexbox">
           <li><a href="/about">About</a></li>
-          <li><a href="/resources">Extra Resources</a></li>
+          <li><a href="/resources">Resources</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
 
-      <section class="flexbox landing" id="landing-page">
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
+      <section class="flexbox main-sec" id="landing-page">
+        <div class=" flexbox sub-sec">
+          <button type="submit" id="choose-login">Login</button>
+          <button type="submit" id="choose-register">Register</button>
+        </div>
       </section>
 
-      <section class="flexbox login" id="login-page">
-        <form class="flexbox login-form" id="login-form">
-          <label>Username</label><input id="login-user-name" type="text" placeholder="User Name" />
+      <section class="flexbox main-sec" id="login-page">
+        <form class="flexbox sub-sec" id="login-form">
+          <label>Username</label><input id="login-user-name" type="text"/>
           <label>Password</label><input id="login-password" type="password" placeholer="password" />
           <button type="submit" id="login">Go</button>
         </form>
       </section>
 
-      <section class="flexbox register" id="register-page">
-        <form class="flexbox register-form" id="register-form">
-          <input id="first-name" type="text" placeholder="First Name" />
-          <input id="last-name" type="text" placeholder="Last Name" />
-          <input id="register-user-name" type="text" placeholder="User Name" />
-          <input id="register-password" type="password" />
+      <section class="flexbox main-sec" id="register-page">
+        <form class="flexbox sub-sec" id="register-form">
+          <label>First Name</label><input id="first-name" type="text"/>
+          <label>Last Name</label><input id="last-name" type="text"/>
+          <label>User Name</label><input id="register-user-name" type="text"/>
+          <label>Password</label><input id="register-password" type="password" />
           <button type="submit" id="register">Register</button>
         </form>
       </section>
@@ -68,18 +70,18 @@
       <section class="flexbox edit-plan" id="edit-plan">
         <form class="user-information">
           <h3> Personal Information </h3>
-          <label>First Name</label><input class="user-info" type="text" name="firstname">
-          <label>Last Name</label><input class="user-info" type="text" name="lastname">
+          <label>First Name</label><input class="user-info" type="text" name="firstName">
+          <label>Last Name</label><input class="user-info" type="text" name="lastName">
           <label>Email</label><input class="user-info" type="email" name="email">
           <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
           <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
           <h4> Address </h4>
-            <label>Address Line 1</label><input class="user-info" type="text" name="line-one">
-            <label>Address Line 2</label><input class="user-info" type="text" name="line-two">
+            <label>Address Line 1</label><input class="user-info" type="text" name="lineOne">
+            <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo">
             <label>City</label><input class="user-info" type="text" name="city">
             <label>State</label><input class="user-info" type="text" name="state">
             <label>Postal Code</label><input class="user-info" type="text" name="zip">
-            <button type="submit" id="user-info" class="user-info">Submit</button>
+            <button type="submit" id="user-info">Submit</button>
         </form>
         <form class="base-kit">
           <h3> Emergency Kit Checklist </h3>
