@@ -3,7 +3,6 @@
 //***test variables and functions, to be deleted***
 
 
-
 // ***end delete test section***
   CurrentUser.all = [];
   //creates a new object for the user with properties to match data input
@@ -16,7 +15,12 @@
   CurrentUser.pullData = function(userId) {
     var userInfo = new Firebase('https://blinding-fire-6623.firebaseio.com/web/data/' + userId);
     userInfo.on('value', function(snapshot){
-      CurrentUser.all = new CurrentUser(snapshot.val());
+      if(snapshot.val()){
+        CurrentUser.all = new CurrentUser(snapshot.val());
+      }
+      else{
+        console.log('No existing data');
+      }
     }, function(error){
       console.log('Read failed', error);
     });
@@ -35,6 +39,23 @@
     }
   };
 
-
   module.CurrentUser = CurrentUser;
 }(window));
+
+var test;
+var baseData = [];
+function kitData() {
+  $.getJSON('data/baseKit.json')
+  .done(function(data){
+    baseData = data;
+    baseData.forEach(function(ele){
+      $('.base-kit').append(appendToPage(ele));
+    });
+  });
+};
+
+function appendToPage(ele) {
+  var template = Handlebars.compile($('#check-box-template').text());
+  console.log(ele.item);
+  return template(ele);
+};
