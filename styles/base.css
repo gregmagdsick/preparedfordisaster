@@ -3,30 +3,73 @@
 
 header {
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background-color: #0055cc; }
+  background-color: #7f7e78; }
   header img {
-    max-height: 100px; }
+    max-height: 75px;
+    margin: 1% 1%; }
   header nav {
     width: 70%; }
     header nav ul {
-      justify-content: space-between;
-      list-style-type: none; }
+      justify-content: space-around;
+      list-style-type: none;
+      margin: 0; }
       header nav ul a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: white;
+        font-size: 2em; }
 
-main {
-  display: flex;
+.landing {
   justify-content: center;
-  align-items: center;
-  min-height: 500px;
-  flex-wrap: wrap; }
-  main section {
-    margin: 0px 30px 30px 30px;
-    min-width: 300px;
-    min-height: 300px;
-    width: 60%;
-    height: 60%;
-    background-color: rgba(0, 0, 0, 0.8); }
+  width: 50%;
+  height: 175px;
+  margin: 25% auto;
+  background-color: #ccc9c0;
+  border-radius: 2px; }
+  .landing a {
+    text-decoration: none;
+    color: white;
+    margin: auto 4%;
+    font-size: 2em;
+    background-color: #19497f;
+    border-radius: 5px;
+    padding: 1%; }
+
+.login {
+  background-color: #ccc9c0;
+  border-radius: 2px;
+  justify-content: center;
+  width: 50%;
+  max-height: 275px;
+  max-width: 225px;
+  margin: 25% auto; }
+  .login .login-form {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; }
+    .login .login-form input {
+      margin: 2% auto;
+      max-width: 80%; }
+    .login .login-form button {
+      margin: 2% auto; }
+
+.register {
+  background-color: #ccc9c0;
+  border-radius: 2px;
+  justify-content: center;
+  width: 50%;
+  max-height: 275px;
+  max-width: 225px;
+  margin: 25% auto; }
+  .register .register-form {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; }
+    .register .register-form input {
+      margin: 2% auto;
+      max-width: 80%; }
+    .register .register-form button {
+      margin: 2% auto; }
 
 /*# sourceMappingURL=base.css.map */
