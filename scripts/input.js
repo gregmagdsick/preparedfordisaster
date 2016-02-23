@@ -1,4 +1,4 @@
-var test;
+var test = {};
 var userInput = [];
 userInput.kitData = function() {
   $.getJSON('data/baseKit.json')
@@ -16,11 +16,26 @@ userInput.toHtml = function(ele) {
   return template(ele);
 };
 
+// $('input:text').focus(function(e){
+//   e.preventDefault()},
+//   function(){
+//       console.log(this)
+//     $(this).val('');
+//   });
+$('.user-information').on('submit', function(e){
+  e.preventDefault();
+  var inputText = $('.user-info');
+  inputText.map(function(acc, cur){
+    if(this.value && this.value !== 'submit'){
+      test[this.name] = this.value;
+    }
+  });
+});
+
 $('.base-kit').on('submit', function(e){
   e.preventDefault();
-  console.log('yep')
-  console.log(e)
-  ($('input.user-kit')).map(function(){
-    return $(':checkbox:checked').val();
+  var checkedItems = $(':checkbox:checked');
+  checkedItems.map(function() {
+    return (this.value);
   });
 });
