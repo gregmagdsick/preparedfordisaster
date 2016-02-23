@@ -1,4 +1,4 @@
-var test;
+var test = {};
 var userInput = [];
 userInput.kitData = function() {
   $.getJSON('data/baseKit.json')
@@ -7,6 +7,7 @@ userInput.kitData = function() {
     userInput.all.forEach(function(ele){
       $('.base-kit').append(userInput.toHtml(ele));
     });
+    $('.base-kit').append('<input type="submit" value="submit">');
   });
 };
 
@@ -15,8 +16,21 @@ userInput.toHtml = function(ele) {
   return template(ele);
 };
 
+
+$('.user-information').on('submit', function(e){
+  e.preventDefault();
+  var inputText = $('.user-info');
+  inputText.map(function(acc, cur){
+    if(this.value && this.value !== 'submit'){
+      CurrentUser.all[this.name] = this.value;
+    }
+  });
+});
+
 $('.base-kit').on('submit', function(e){
   e.preventDefault();
-  console.log('yes');
-  console.log(this);
+  var checkedItems = $(':checkbox:checked');
+  CurrentUser.all['userKit'] = checkedItems.map(function(acc) {
+    return this.value;
+  });
 });

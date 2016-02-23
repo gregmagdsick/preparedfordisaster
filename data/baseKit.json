@@ -1,18 +1,18 @@
 [
   {
   "item": "Water",
-  "description": "One gallon/person per day (min of 3 days)"
+  "description": "for one gallon/person per day (min of 3 days)"
   },
   {
   "item": "Food",
-  "description": "At least 3 days of non-perishable food"
+  "description": "for at least 3 days of non-perishable food"
   },
   {
   "item": "Battery-Powered or Crank Radio"
   },
   {
   "item": "NOAA Weather Radio",
-  "description": "With tone alert"
+  "description": "with tone alert"
   },
   {
   "item": "Flashlight"
@@ -31,19 +31,19 @@
   },
   {
   "item": "Sheeting and Duct Tape",
-  "description": "To allow quick shelter in place"
+  "description": "to allow quick shelter in place"
   },
   {
   "item": "Moist Towelettes",
-  "description": "For Sanitation"
+  "description": "for Sanitation"
   },
   {
   "item": "Garbage bags and Plastic Ties",
-  "description": "For (all kinds) of waste disposal"
+  "description": "for (all kinds) of waste disposal"
   },
   {
   "item": "Wrench or Pliers",
-  "description": "To turn off utilities"
+  "description": "to turn off utilities"
   },
   {
   "item": "Can Opener"
