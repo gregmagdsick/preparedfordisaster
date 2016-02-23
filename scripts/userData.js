@@ -41,21 +41,3 @@
 
   module.CurrentUser = CurrentUser;
 }(window));
-
-var test;
-var baseData = [];
-function kitData() {
-  $.getJSON('data/baseKit.json')
-  .done(function(data){
-    baseData = data;
-    baseData.forEach(function(ele){
-      $('.base-kit').append(appendToPage(ele));
-    });
-  });
-};
-
-function appendToPage(ele) {
-  var template = Handlebars.compile($('#check-box-template').text());
-  console.log(ele.item);
-  return template(ele);
-};
