@@ -6,7 +6,7 @@
 
 
     <script id="check-box-template" type="text/x-handlebars-template">
-      <input type="checkbox" name="{{item}}" value={{item}}>{{item}} {{description}}<br>
+      <input type="checkbox" class='user-kit' name="{{item}}" value="{{item}}">{{item}} {{description}}<br>
     </script>
 
   </head>
@@ -14,8 +14,25 @@
     <header>
     </header>
 
-    <form action="" class="base-kit">
-      <input type="submit" value="Submit">
+    <h3> Personal Information </h3>
+    <form class="user-information">
+      First Name: <input class="user-info" type="text" name="firstname">
+      Last Name: <input class="user-info" type="text" name="lastname">
+      Email Address: <input class="user-info" type="text" name="email">
+      <h4> Address </h4>
+      <table>
+        <tr><td>Address Line 1 <input class="user-info" type="text" name="line-one"></td></tr>
+        <tr><td>Address Line 2 <input class="user-info" type="text" name="line-two"></td></tr>
+        <tr><td>City <input class="user-info" type="text" name="city"></td></tr>
+        <tr><td>State <input class="user-info" type="text" name="state"></td>
+            <td>Zip/Postal Code <input class="user-info" type="text" name="zip"></td></tr>
+      </table>
+      <input class="user-info" type="submit" value="submit">
+    </form>
+
+
+
+    <form class="base-kit">
     </form>
 
     <footer>
