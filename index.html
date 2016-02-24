@@ -24,7 +24,7 @@
       <label>Primary Phone</label><input class="emer-info" type="text" name="primaryPhone">
       <label>Secondary Phone</label><input class="emer-info" type="text" name="secondaryPhone">
       <h4> Address </h4>
-      <labe>Address Line 1</label><input class="emer-info" type="text" name="lineOne">
+      <label>Address Line 1</label><input class="emer-info" type="text" name="lineOne">
       <label>Address Line 2</label><input class="emer-info" type="text" name="lineTwo">
       <label>City</label><input class="emer-info" type="text" name="city">
       <label>State</label><input class="emer-info" type="text" name="state">
@@ -75,11 +75,13 @@
       <section id="about-box" class="about-box">
       </section>
 
-      <section id="homepage">
-        <button type="submit" id="authorize-button">Email me my plan</button>
-        <button type="submit" id="create-plan">Edit or create my disaster plan</button>
-        <div>
-          PLAN GOES HERE
+      <section class="flexbox main-sec" id="homepage">
+        <div class="flexbox sub-sec">
+          <button type="submit" id="authorize-button">Email me my plan</button>
+          <button type="submit" id="create-plan">Edit or create my disaster plan</button>
+          <div>
+            PLAN GOES HERE
+          </div>
         </div>
       </section>
 
@@ -99,7 +101,7 @@
             <label>Postal Code</label><input class="user-info" type="text" name="zip">
             <button type="submit" id="user-info">Submit</button>
         </form>
-        <form id="emergenecy-button">
+        <form id="emergenecy-button" class="sub-sec">
           <button class="emergency-info" type="submit">Create Emergency Contact</button>
         </form>
         <form id="emergenecy-info" class="sub-sec">
