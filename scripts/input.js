@@ -25,7 +25,7 @@ $('#emergenecy-button').on('submit', function(e){
 
 $('#emergenecy-info').on('submit', function(e){
   e.preventDefault();
-  CurrentUser.all['lovedOnes'] = $('.emer-info').prototype.reduce(function(){
+  CurrentUser.all['lovedOnes'] = $('.emer-info').map(function(){
     if(this.value && this.value !== 'submit'){
       var robj = {};
       robj[this.name] = this.value;
