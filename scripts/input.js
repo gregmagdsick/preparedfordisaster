@@ -21,14 +21,9 @@ userInput.toHtml = function(ele, id) {
 $('#emergenecy-button').on('submit', function(e){
   e.preventDefault();
   $('#emergenecy-button').hide();
-<<<<<<< HEAD
   $('#emergenecy-info').show();
   $('#emergenecy-info').append(userInput.toHtml('','#emergency-contact-template'));
-=======
-  var ele = 'test';
-  $('#emergenecy-info').append(userInput.toHtml(ele,'#emergency-contact-template'));
   base64test.handle();
->>>>>>> a7deb6e4b283f3b15c52c589eb1161d416b598a0
 });
 
 $('#emergenecy-info').on('submit', function(e){
