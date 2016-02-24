@@ -17,7 +17,7 @@
   controller.homepage = function() {
     login.check();
     $('#homepage').show().siblings().hide();
-    CurrentUser.pullData(userData.uid);
+    CurrentUser.pullData(userData);
   };
 
   controller.about = function() {

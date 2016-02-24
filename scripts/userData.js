@@ -16,6 +16,7 @@
     var userInfo = new Firebase('https://blinding-fire-6623.firebaseio.com/web/data/' + userId);
     userInfo.on('value', function(snapshot){
       if(snapshot.val()){
+        $('.emergency-contact-plan').remove();
         CurrentUser.all = new CurrentUser(snapshot.val());
         $('#homepage').append(home.render(CurrentUser.all, '#final-emergency-plan-form-template'));
 
