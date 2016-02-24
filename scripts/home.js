@@ -7,7 +7,6 @@
   };
 
 
-
   $('#create-plan').on('click', home.editPlan);
 
   module.home = home;
