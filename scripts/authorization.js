@@ -9,21 +9,7 @@
   var messageTemplate;
 
   gmailAPI.populateMessage = function() {
-     messageTemplate = '<p>Hello,' + CurrentUser.all.firstname + '<br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is your current emergency preparedness plan for you and your family to help safeguard during imes of emergency: </p>' +
-     '<p><b>First Name:</b> ' +  CurrentUser.all.firstname + ' <b>Last Name:</b> '+ CurrentUser.all.lastname +'</p>'+
-     '<p><b>Email:</b> ' +  CurrentUser.all.email +'</p>' + '<p><b>Address:</b>' +  CurrentUser.all.Address +'</p>' +
-     '<p><b>State:</b>' +  CurrentUser.all.State +'</p>' +
-     '<p><b>Zip Code:</b> ' +  CurrentUser.all.zip +'</p>' +
-     '<p><b>Emergency Rally Point One:</b>' + CurrentUser.all.emergencyplan.rallypoint1 +'</p>'+
-     '<p><b>Emergency Rally Point Two:</b> ' + CurrentUser.all.emergencyplan.rallypoint2 +'</p>' +
-     '<p><b>First Emergency Contact:</b>' +  CurrentUser.all.LovedOnes.LoveOne1.Father +'</p>' +
-     '<p><b>Age:</b>' +  CurrentUser.all.LovedOnes.LoveOne1.Age +'</p>' +
-     '<p><b>Height:</b> ' +  CurrentUser.all.LovedOnes.LoveOne1.Height +'</p>' +
-     '<p><b>Phone Contact:</b> ' + CurrentUser.all.LovedOnes.LoveOne1.Phone +'</p>' +
-     '<p><b>Second Emergency Contact:</b>' + CurrentUser.all.LovedOnes.LovedOne2.Mother +'</p>' +
-     '<p><b>Height:</b>' +  CurrentUser.all.LovedOnes.LovedOne2.Height +'</p>' +
-     '<p><b>Age:</b>' +  CurrentUser.all.LovedOnes.LovedOne2.Age +'</p>' +
-     '<p><b>Phone Contact:</b>' +  CurrentUser.all.LovedOnes.LovedOne2.Phone +'</p>';
+      messageTemplate = $('.emergency-contact-plan').html();
   };
 
   gmailAPI.HandleClientLoad = function() {
