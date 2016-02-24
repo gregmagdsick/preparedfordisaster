@@ -17,6 +17,8 @@
     userInfo.on('value', function(snapshot){
       if(snapshot.val()){
         CurrentUser.all = new CurrentUser(snapshot.val());
+        $('#homepage').append(home.render(CurrentUser.all, '#final-emergency-plan-form-template'));
+
       }
       else{
         console.log('No existing data');
@@ -24,6 +26,7 @@
     }, function(error){
       console.log('Read failed', error);
     });
+
   };
   //Saves data to Firebase, will overwrite any existing data for the specific user.
   CurrentUser.saveData = function(userId) {
