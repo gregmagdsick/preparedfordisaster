@@ -3,13 +3,18 @@
 $margin: 0px 30px 30px 30px;
 $background-color: white;
 $text-color: black;
+$our-dark-green: #4BB612;
+$our-red: #E90000;
+$our-light-green: #3BEC3B;
+$our-orange: #B64212;
+$our-brown: #834B34;
 
 .flexbox {
   display: flex;
 }
 
 body {
-  background: linear-gradient(45deg,  rgba(182, 66, 18,0.8) 0%,rgba(233, 0, 0,0.4) 100%);
+  background-color: linear-gradient(45deg,  rgba(182, 66, 18,0.8) 0%,rgba(233, 0, 0,0.4) 100%);
   // background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
 }
 
@@ -17,7 +22,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: rgb(127, 126, 120);
+  background-color: $our-dark-green;
   img {
     max-height: 75px;
     margin: 1% 1%;
@@ -93,7 +98,7 @@ header {
     button {
       cursor: pointer;
       outline: none;
-      background: #4285F4;
+      background: $our-red;
       width: 100%;
       border: 0;
       border-radius: 4px;
@@ -129,7 +134,7 @@ header {
 
   button {
     outline: none;
-    background: #4285F4;
+    background: $our-red;
     width: 100%;
     border: 0;
     border-radius: 4px;
