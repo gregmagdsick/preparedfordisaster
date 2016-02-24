@@ -1,7 +1,7 @@
 (function(module) {
   var login = {};
   var ref = new Firebase('https://blinding-fire-6623.firebaseio.com');
-  var userData;
+  var userData = {};
 
   login.register = function(e) {
     e.preventDefault();
@@ -66,6 +66,21 @@
 
   $('#login').on('click',login.newLogin);
 
+//Verifies user is logged in,
+  login.authDataCallback = function(authData) {
+    if (authData) {
+      userData.uid = authData.uid;
+      module.userData = userData.uid;
+    } else {
+      window.location = '/login';
+    }
+    CurrentUser.pullData(authData.uid);
+  };
+
+  login.check = function(ctx, next){
+    var ref = new Firebase('https://blinding-fire-6623.firebaseio.com');
+    ref.onAuth(login.authDataCallback);
+  };
 
   module.login = login;
 })(window);
