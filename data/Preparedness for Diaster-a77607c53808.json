@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "preparedness-for-diaster",
+  "private_key_id": "a77607c538088c71fa25fbb13cd4a80ab80c1191",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCK2jfWgIgDDUwC\n/4NiJkQR1psuv8W2rt4JsmAd4LKFe8SV+mCRWAJ2ljEECcYlBiz8SD0S7gH487Oj\nR/mJUPPoPDE12kHN1Jc9v/u85/YCpPgZh50DWHUk2Pmjd1LpaBbVfUQeEddfb4kS\nzaz/D/IgI16JGoFSERkAEzc+016Z+6c+WQcYYiZs2ZzoJs3oZc5gjaXGEvezHTTQ\nrn9VoAqO4QXG0FqjJYS96oEeorvY1m9d04GkOoqTloUQ02AZSAKfc8po7sjnypgf\nsOYH4jVhvq32ytvnypvX2ppiCXyOqfdnKkpbuRFUHF+Xd+Eu7aWy9BnpqfvEuFgt\n0Un60P6JAgMBAAECggEBAInejUz2SJbHMC9V5+2f0zznGyT7E+UFksCMFfX0sy3p\nK9RDTHlkquV20eqRjeYbULWbQNE39EtuJ3M8NyDKebShd7diJK6spROSOfJjXBla\nFmK7DgNRZNeWfaF7DJ9nVCzc+bLlwjUnuTIreNe1zJNuqyJ1Z+zFv04cxmEiXS+E\ngoVOpcwm0ZhMsx32Zk6wD9cbhAnixPmy6SZyN5dX0PCZ5Z84Uc2OqOfUAsga5Liw\n//EJqg05mxxkLDJl9yw20UcweAjwg6rxntIDH5AEbUK+QzR6ycP1SgmeuNdBLK38\nTty7DcIaANl9MBmTlL/lR5h0Wj/GkwGnESDknIeF8QUCgYEAyAmOHSeoOqD9gonS\nWeg+mT09TGQwwAuRuD4rYkYhmnukYfON63u5Kukwn136xPDbJVRIA64t0VuOukse\ngETfvxbkl1bS5fkFw12YiDbYA//VwzjjZ6dnvlCIDYNNH9Ah5nJGHPHo5cKg41HP\n4So1I2s3eKlqZZdGWUiLCojd6+sCgYEAsbKrZ9mlkDsjEEpw90yH+Z+Bm1K+BlXg\n5jMxWiZrfof26n/22Gvuy0lvCsnBv7aTNiuTbzyHiP/S2nB4jiqICYGa3/ZkNR/2\ng9oi50yMlOzFic7ZGw5SQ4HZ5TGACLNe5KS1Pgm5n9dHrv6g28ayTZCpkxV/ceOW\nV9ozexSr5lsCgYBiC5zmWVuxcNsQsnCxtI2KGmQDH1BtsL35qi8lee5ag6Oshu3W\nr8uwZp94XV3eTZd8EnVBqIu4g8HPOaZ3hEqOpK/iJaI1KftTKHrsuMTkIO8rQqTj\nV0AYHeyxgtu4bhFPnE8VPNTEWML26FCVslRdSd3kfFUz+hN3C4Fq5m6vhQKBgQCX\n/xZyvE7MMmlps+MxBXuB4BhCveHhFXBMOBnM3PQxxSdFqrOAp8IYjPW4qp9Z11fQ\njDGOgp4EZ576Th4wrNy0FPJfBCju8Coy2lHkuyu871KA8Dfw1q0zJU02qMK1rohK\n10BYkoT+3mxomVEK7MjzY/xI3ainyF5/Qxup+iKX5QKBgF+ARad79F3OaBu9IHN5\naK3QsPTURJr7xO7e90FppLEDSZFOaUGkc54jj/BzES/Jumeo1v2jV5CLL+B7TB0k\nOPKOdhA48le6+GMgv3qVKRVdbqKyYXk2W2VuVhUSlTvAEHiicUMPKptS/7HpRsyx\nMATnVZaij5IkTEZK4DjXXahr\n-----END PRIVATE KEY-----\n",
+  "client_email": "email-sender@preparedness-for-diaster.iam.gserviceaccount.com",
+  "client_id": "106633369503944987964",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/email-sender%40preparedness-for-diaster.iam.gserviceaccount.com"
+}
