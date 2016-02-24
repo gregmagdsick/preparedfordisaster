@@ -21,6 +21,7 @@ $('#emergenecy-button').on('submit', function(e){
   $('#emergenecy-button').hide();
   var ele = 'test';
   $('#emergenecy-info').append(userInput.toHtml(ele,'#emergency-contact-template'));
+  base64test.handle();
 });
 
 $('#emergenecy-info').on('submit', function(e){
