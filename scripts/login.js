@@ -49,9 +49,18 @@
     });
   };
 
-  login.index = function() {
-    page('/home');
+  login.chooseLogin = function (e) {
+    e.preventDefault();
+    page('/login');
   };
+
+  login.chooseRegister = function (e) {
+    e.preventDefault();
+    page('/register');
+  };
+
+  $('#choose-login').on('click',login.chooseLogin);
+  $('#choose-register').on('click',login.chooseRegister);
 
   $('#register').on('click',login.register);
 
