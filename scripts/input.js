@@ -2,7 +2,6 @@
 
   var userInput = [];
   CurrentUser.all.lovedOnes = [];
-  var array = {};
   userInput.kitData = function() {
     $.getJSON('data/baseKit.json')
     .done(function(data){
@@ -36,10 +35,10 @@
     });
     var otherContact = {};
     otherContact[array.firstName.toLowerCase()] = array;
-    CurrentUser.all.lovedOnes[array.firstName.toLowerCase()].push(otherContact);
+    CurrentUser.all.lovedOnes.push(otherContact);
     $('.emer-info').val('');
     $('#emergenecy-info').prepend('<p>'+ array.firstName + ' ' + array.lastName + ' added</p>');
-    CurrentUser.saveData(userData.uid);
+    CurrentUser.saveData(userData);
   });
 
 
@@ -51,7 +50,7 @@
       }
     });
     $('.user-info').val('');
-    CurrentUser.saveData(userData.uid);
+    CurrentUser.saveData(userData);
   });
 
   $('.base-kit').on('submit', function(e){
@@ -60,7 +59,7 @@
       return this.value;
     });
     $('.base-kit').children('input').removeAttr('checked');
-    CurrentUser.saveData(userData.uid);
+    CurrentUser.saveData(userData);
   });
 
   module.userInput = userInput;
