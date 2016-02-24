@@ -1,7 +1,6 @@
 (function(module){
 
   var userInput = [];
-  CurrentUser.all.lovedOnes = [];
   userInput.kitData = function() {
     $.getJSON('data/baseKit.json')
     .done(function(data){

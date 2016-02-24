@@ -74,6 +74,7 @@
     } else {
       window.location = '/login';
     }
+    CurrentUser.pullData(authData.uid);
   };
 
   login.check = function(ctx, next){
