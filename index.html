@@ -15,20 +15,20 @@
       </div>
     </script>
 
-    <script id='emergency-contact-template' type="text/x-handlebars-template">
+    <script id="emergency-contact-template" type="text/x-handlebars-template">
       <h3>Emergency Contact</h3>
-      <label>Relationship: </label><input class="emer-info" type="text" name="relationship">
-      <label>First Name: </label><input class="emer-info" type="text" name="firstName">
-      <label>Last Name: </label><input class="emer-info" type="text" name="lastName">
-      <label>Email Address: </label><input class="emer-info" type="text" name="email">
-      <label>Primary Phone: </label><input class="emer-info" type="text" name="primaryPhone">
-      <label>Secondary Phone: </label><input class="emer-info" type="text" name="secondaryPhone">
+      <label>Relationship</label><input class="emer-info" type="text" name="relationship">
+      <label>First Name</label><input class="emer-info" type="text" name="firstName">
+      <label>Last Name</label><input class="emer-info" type="text" name="lastName">
+      <label>Email Address</label><input class="emer-info" type="text" name="email">
+      <label>Primary Phone</label><input class="emer-info" type="text" name="primaryPhone">
+      <label>Secondary Phone</label><input class="emer-info" type="text" name="secondaryPhone">
       <h4> Address </h4>
-      <labe>Address Line 1 </label><input class="emer-info" type="text" name="lineOne">
-      <label>Address Line 2 </label><input class="emer-info" type="text" name="lineTwo">
-      <label>City </label><input class="emer-info" type="text" name="city">
-      <label>State </label><input class="emer-info" type="text" name="state">
-      <label>Zip/Postal Code </lable><input class="emer-info" type="text" name="zip">
+      <labe>Address Line 1</label><input class="emer-info" type="text" name="lineOne">
+      <label>Address Line 2</label><input class="emer-info" type="text" name="lineTwo">
+      <label>City</label><input class="emer-info" type="text" name="city">
+      <label>State</label><input class="emer-info" type="text" name="state">
+      <label>Zip/Postal Code</lable><input class="emer-info" type="text" name="zip">
       <button type="submit">Submit</button>
     </script>
 
@@ -76,7 +76,7 @@
       </section>
 
       <section id="homepage">
-        <button type="submit" id="send-plan">Email me my plan</button>
+        <button type="submit" id="authorize-button">Email me my plan</button>
         <button type="submit" id="create-plan">Edit or create my disaster plan</button>
         <div>
           PLAN GOES HERE
@@ -102,7 +102,7 @@
         <form id="emergenecy-button">
           <button class="emergency-info" type="submit">Create Emergency Contact</button>
         </form>
-        <form id="emergenecy-info">
+        <form id="emergenecy-info" class="sub-sec">
         </form>
         <form class="base-kit">
           <h3> Emergency Kit Checklist </h3>
@@ -127,7 +127,7 @@
     <script src="scripts/login.js"></script>
     <script src="scripts/userData.js"></script>
     <script src="scripts/home.js"></script>
-    <!-- <script src="scripts/authorization.js"></script> -->
+    <script src="scripts/authorization.js"></script>
     <script src="scripts/userData.js"></script>
     <script src="scripts/input.js"></script>
     <script src="scripts/controller.js"></script>
