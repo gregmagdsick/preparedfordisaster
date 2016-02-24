@@ -15,6 +15,23 @@
       </div>
     </script>
 
+    <script id='emergency-contact-template' type="text/x-handlebars-template">
+      <h3>Emergency Contact</h3>
+      <label>Relationship: </label><input class="emer-info" type="text" name="relationship">
+      <label>First Name: </label><input class="emer-info" type="text" name="firstName">
+      <label>Last Name: </label><input class="emer-info" type="text" name="lastName">
+      <label>Email Address: </label><input class="emer-info" type="text" name="email">
+      <label>Primary Phone: </label><input class="emer-info" type="text" name="primaryPhone">
+      <label>Secondary Phone: </label><input class="emer-info" type="text" name="secondaryPhone">
+      <h4> Address </h4>
+      <labe>Address Line 1 </label><input class="emer-info" type="text" name="lineOne">
+      <label>Address Line 2 </label><input class="emer-info" type="text" name="lineTwo">
+      <label>City </label><input class="emer-info" type="text" name="city">
+      <label>State </label><input class="emer-info" type="text" name="state">
+      <label>Zip/Postal Code </lable><input class="emer-info" type="text" name="zip">
+      <button type="submit">Submit</button>
+    </script>
+
   </head>
   <body>
 
@@ -81,6 +98,11 @@
             <label>State</label><input class="user-info" type="text" name="state">
             <label>Postal Code</label><input class="user-info" type="text" name="zip">
             <button type="submit" id="user-info">Submit</button>
+        </form>
+        <form id="emergenecy-button">
+          <button class="emergency-info" type="submit">Create Emergency Contact</button>
+        </form>
+        <form id="emergenecy-info">
         </form>
         <form class="base-kit">
           <h3> Emergency Kit Checklist </h3>
