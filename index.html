@@ -16,7 +16,7 @@
     </script>
 
     <script id="emergency-contact-template" type="text/x-handlebars-template">
-      <h3>Emergency Contact</h3>
+      <h3>Household Member</h3>
       <label>Headshot of Contact</label><img src="" alt="" /><input id="inputFileToLoad" type="file"; />
       <label>Relationship</label><input class="emer-info" type="text" name="relationship">
       <label>First Name</label><input class="emer-info" type="text" name="firstName">
@@ -53,7 +53,7 @@
 
     <script id="final-emergency-plan-lovedones-template" type="text/x-handlebars-template">
       <div class="emergency-contact-plan">
-        <p>First Emergency Contact: {{{loveOnes.firstname}}</p>
+        <p>First Household Member: {{{loveOnes.firstname}}</p>
         <p>Relationship: {{{loveOnes.relationship}}</p>
         <p>Age: {{lovedOnes.Age}}</p>
         <p>Email {{loveOnes.email}}</p>
@@ -133,7 +133,7 @@
             <button type="submit" id="user-info">Submit</button>
         </form>
         <form id="emergenecy-button" class="sub-sec">
-          <button class="emergency-info" type="submit">Create Emergency Contact</button>
+          <button class="emergency-info" type="submit">Create Household Member</button>
         </form>
         <form id="emergenecy-info" class="sub-sec">
         </form>
