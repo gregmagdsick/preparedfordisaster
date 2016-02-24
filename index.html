@@ -33,6 +33,33 @@
       <button type="submit">Submit</button>
     </script>
 
+    <script id="final-emergency-plan-form-template" type="text/x-handlebars-template">
+      <h2>User Information</h2>
+      <p>Hello, {{firstName}} <br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is your current emergency preparedness plan for you and your family to help safeguard during times of emergency: </p>
+      <p>First Name: {{firstName}} Last Name: {{lastName}} </p>
+      <p>Email: {{email}} </p>
+      <p>Address: {{lineOne}} </p>
+      <p>City: {{city}} </p>
+      <p>State: {{state}} </p>
+      <p>Zip Code: {{zip}} </p>
+      <p>Primary Phone: {{primaryPhone}} </p>
+      <p>Secondary Phone: {{secondaryPhone}} </p>
+      <p>Emergency Rally Point One: {{rallypointOne}}</p>
+      <p>Emergency Rally Point Two: {{rallypointTwo}}</p>
+    </script>
+
+    <script id="final-emergency-plan-lovedones-template" type="text/x-handlebars-template">
+      <p>First Emergency Contact: {{{loveOnes.firstname}}</p>
+      <p>Relationship: {{{loveOnes.relationship}}</p>
+      <p>Age: {{lovedOnes.Age}}</p>
+      <p>Email {{loveOnes.email}}</p>
+      <p>Primary Phone: {{lovedOnes.primaryPhone}}</p>
+      <p>Address:  {{lovedOnes.lineOne}</p>
+      <p>City:  {{lovedOnes.city}}</p>
+      <p>State  {{lovedOnes.state}}</p>
+      <p>Zip Code: {{lovedOnes.zip}</p>
+    </script>
+
   </head>
   <body>
 
@@ -80,9 +107,6 @@
         <div class="flexbox sub-sec">
           <button type="submit" id="authorize-button">Email me my plan</button>
           <button type="submit" id="create-plan">Edit or create my disaster plan</button>
-          <div>
-            PLAN GOES HERE
-          </div>
         </div>
       </section>
 
