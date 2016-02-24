@@ -63,5 +63,5 @@
     CurrentUser.saveData(userData.uid);
   });
 
-  module.CurrentUser = CurrentUser;
+  module.userInput = userInput;
 }(window));

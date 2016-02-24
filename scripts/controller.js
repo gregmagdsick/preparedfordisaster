@@ -2,6 +2,7 @@
   controller = {};
 
   controller.landing = function() {
+    login.check();
     $('#landing-page').show().siblings().hide();
   };
 
@@ -14,6 +15,7 @@
   };
 
   controller.homepage = function() {
+    login.check();
     $('#homepage').show().siblings().hide();
     CurrentUser.pullData(userData.uid);
   };
@@ -27,6 +29,7 @@
   };
 
   controller.plan = function() {
+    login.check();
     $('#edit-plan').show().siblings().hide();
   };
 
