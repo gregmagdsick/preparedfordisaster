@@ -1,4 +1,6 @@
 var userInput = [];
+CurrentUser.all.lovedOnes;
+var array = {};
 userInput.kitData = function() {
   $.getJSON('data/baseKit.json')
   .done(function(data){
@@ -19,23 +21,25 @@ userInput.toHtml = function(ele, id) {
 $('#emergenecy-button').on('submit', function(e){
   e.preventDefault();
   $('#emergenecy-button').hide();
-  var ele = 'test';
-  $('#emergenecy-info').append(userInput.toHtml(ele,'#emergency-contact-template'));
+  $('#emergenecy-info').show();
+  $('#emergenecy-info').append(userInput.toHtml('','#emergency-contact-template'));
 });
 
 $('#emergenecy-info').on('submit', function(e){
   e.preventDefault();
-  CurrentUser.all['lovedOnes'] = $('.emer-info').map(function(){
+  var array = {};
+  $('.emer-info').map(function(){
     if(this.value && this.value !== 'submit'){
-      var robj = {};
-      robj[this.name] = this.value;
-      return robj;
+      array[this.name] = this.value;
     }
   });
-  $('#emergenecy-info').hide();
-  $('#emergenecy-button').show();
-  $('#emergenecy-button').append('<p>'+ CurrentUser.all.lovedOnes[0].firstName + ' added</p>');
+  var otherContact = {};
+  otherContact[array.firstName.toLowerCase()] = array;
+  CurrentUser.all.lovedOnes = otherContact;
+  $('.emer-info').val('');
+  $('#emergenecy-info').prepend('<p>'+ array.firstName + ' ' + array.lastName + ' added</p>');
 });
+
 
 $('.user-information').on('submit', function(e){
   e.preventDefault();
