@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prepared for Disaster</title>
+  <link rel="stylesheet" href="vendor/normalize.css">
+  <link rel="stylesheet" href="styles/base.css" media="screen" title="no title" charset="utf-8">
+
+
+  <script id="check-box-template" type="text/x-handlebars-template">
+    <div class="flexbox">
+      <input type="checkbox" class="user-kit" id="{{item}}" name="{{item}}" value="{{item}}">
+      <label for="{{item}}" class="check-img">{{item}}</label>
+    </div>
+  </script>
+
+  <script id="emergency-contact-template" type="text/x-handlebars-template">
+    <h3>Emergency Contact</h3>
+    <label>Relationship</label><input class="emer-info" type="text" name="relationship">
+    <label>First Name</label><input class="emer-info" type="text" name="firstName">
+    <label>Last Name</label><input class="emer-info" type="text" name="lastName">
+    <label>Email Address</label><input class="emer-info" type="text" name="email">
+    <label>Primary Phone</label><input class="emer-info" type="text" name="primaryPhone">
+    <label>Secondary Phone</label><input class="emer-info" type="text" name="secondaryPhone">
+    <h4> Address </h4>
+    <label>Address Line 1</label><input class="emer-info" type="text" name="lineOne">
+    <label>Address Line 2</label><input class="emer-info" type="text" name="lineTwo">
+    <label>City</label><input class="emer-info" type="text" name="city">
+    <label>State</label><input class="emer-info" type="text" name="state">
+    <label>Zip/Postal Code</lable><input class="emer-info" type="text" name="zip">
+      <button type="submit">Submit</button>
+    </script>
+
+    <script id="final-emergency-plan-form-template" type="text/x-handlebars-template">
+      <p>Hello, {{firstname}} <br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is your current emergency preparedness plan for you and your family to help safeguard during imes of emergency: </p>
+      <p>First Name: {{firstname}} Last Name: {{lastname}} </p>
+      <p>Email: {{email}} </p>
+      <p>Address: {{lineOne}} </p>
+      <p>State: {{state}} </p>
+      <p>Zip Code: {{zip}} </p>
+      <p>Emergency Rally Point One: {{rallypointOne}}</p>
+      <p>Emergency Rally Point Two: {{rallypointTwo}}</p>
+    </script>
+
+    <script id="final-emergency-plan-lovedones-template" type="text/x-handlebars-template">
+      <p>First Emergency Contact: {{{loveOnes.firstname}}</p>
+      <p>Relationship: {{{loveOnes.relationship}}</p>
+      <p>Age: {{lovedOnes.Age}}</p>
+      <p>Email {{loveOnes.email}}</p>
+      <p>Primary Phone: {{lovedOnes.primaryPhone}}</p>
+      <p>Address:  {{lovedOnes.lineOne}</p>
+      <p>City:  {{lovedOnes.city}}</p>
+      <p>State  {{lovedOnes.state}}</p>
+      <p>Zip Code: {{lovedOnes.zip}</p>
+    </script>
+
+  </head>
+  <body>
+
+    <header class="flexbox">
+      <img src="images/logo.png" alt="Logo" />
+      <nav>
+        <ul class="flexbox">
+          <li><a href="/about">About</a></li>
+          <li><a href="/resources">Resources</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="flexbox main-sec" id="landing-page">
+        <div class=" flexbox sub-sec">
+          <button type="submit" id="choose-login">Login</button>
+          <button type="submit" id="choose-register">Register</button>
+        </div>
+      </section>
+
+      <section class="flexbox main-sec" id="login-page">
+        <form class="flexbox sub-sec" id="login-form">
+          <label>Username</label><input id="login-user-name" type="text"/>
+          <label>Password</label><input id="login-password" type="password" placeholer="password" />
+          <button type="submit" id="login">Go</button>
+        </form>
+      </section>
+
+      <section class="flexbox main-sec" id="register-page">
+        <form class="flexbox sub-sec" id="register-form">
+          <label>First Name</label><input id="first-name" type="text"/>
+          <label>Last Name</label><input id="last-name" type="text"/>
+          <label>User Name</label><input id="register-user-name" type="text"/>
+          <label>Password</label><input id="register-password" type="password" />
+          <button type="submit" id="register">Register</button>
+        </form>
+      </section>
+
+      <section id="about-box" class="about-box">
+      </section>
+
+      <section class="flexbox main-sec" id="homepage">
+        <div class="flexbox sub-sec">
+          <button type="submit" id="authorize-button">Email me my plan</button>
+          <button type="submit" id="create-plan">Edit or create my disaster plan</button>
+          <div>
+            PLAN GOES HERE
+          </div>
+        </div>
+      </section>
+
+      <section class="flexbox edit-plan main-sec" id="edit-plan">
+        <form class="user-information sub-sec">
+          <h3> Personal Information </h3>
+          <label>First Name</label><input class="user-info" type="text" name="firstName">
+          <label>Last Name</label><input class="user-info" type="text" name="lastName">
+          <label>Email</label><input class="user-info" type="email" name="email">
+          <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
+          <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
+          <h4> Address </h4>
+          <label>Address Line 1</label><input class="user-info" type="text" name="lineOne">
+          <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo">
+          <label>City</label><input class="user-info" type="text" name="city">
+          <label>State</label><input class="user-info" type="text" name="state">
+          <label>Postal Code</label><input class="user-info" type="text" name="zip">
+          <button type="submit" id="user-info">Submit</button>
+        </form>
+        <form id="emergenecy-button" class="sub-sec">
+          <button class="emergency-info" type="submit">Create Emergency Contact</button>
+        </form>
+        <form id="emergenecy-info" class="sub-sec">
+        </form>
+        <form class="base-kit">
+          <h3> Emergency Kit Checklist </h3>
+        </form>
+      </section>
+
+      <section id="additional-resources">
+        <a href="http://www.redcross.org/get-help/prepare-for-emergencies/types-of-emergencies">Red Cross Types of Emergencies</a>
+        <a href="http://www.ready.gov/">Ready.gov</a>
+        <a href="http://www.seattle.gov/emergency-management">Seattle Detp. of Emergency Management</a>
+      </section>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.6.4/page.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src="https://apis.google.com/js/client.js"></script>
+
+
+    <script src="scripts/login.js"></script>
+    <script src="scripts/userData.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/authorization.js"></script>
+    <script src="scripts/userData.js"></script>
+    <script src="scripts/input.js"></script>
+    <script src="scripts/controller.js"></script>
+
+    <script src="scripts/routes.js"></script>
+  </body>
+  </html>
