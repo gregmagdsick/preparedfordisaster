@@ -90,7 +90,7 @@
 
       <section class="flexbox main-sec" id="login-page">
         <form class="flexbox sub-sec" id="login-form">
-          <label>Username</label><input id="login-user-name" type="text"/>
+          <label>Email</label><input id="login-user-name" type="text"/>
           <label>Password</label><input id="login-password" type="password" placeholer="password" />
           <button type="submit" id="login">Go</button>
         </form>
@@ -119,11 +119,11 @@
       <section class="flexbox edit-plan main-sec" id="edit-plan">
         <form class="user-information sub-sec">
           <h3> Personal Information </h3>
-          <label>First Name</label><input class="user-info" type="text" name="firstName">
-          <label>Last Name</label><input class="user-info" type="text" name="lastName">
-          <label>Email</label><input class="user-info" type="email" name="email">
-          <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
-          <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
+            <label>First Name</label><input class="user-info" type="text" name="firstName">
+            <label>Last Name</label><input class="user-info" type="text" name="lastName">
+            <label>Email</label><input class="user-info" type="email" name="email">
+            <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
+            <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
           <h4> Address </h4>
             <label>Address Line 1</label><input class="user-info" type="text" name="lineOne">
             <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo">
@@ -136,6 +136,20 @@
           <button class="emergency-info" type="submit">Create Emergency Contact</button>
         </form>
         <form id="emergenecy-info" class="sub-sec">
+        </form>
+        <form id="rally-button" class="sub-sec">
+          <button class="rally-point" type="submit">Set Rally Points</button>
+        </form>
+        <form class="rally-point sub-sec">
+          <h4>Immediate Rally Point</h4>
+            <input type="text" name="immediate-rally" class="rally-info" placeholder="location across the street" name="immediate-rally">
+          <h4>Out of neighborhood rally point</h4>
+            <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" >
+            <label>Address Line 2</label><input class="rally-info" ="text" name="lineTwo" >
+            <label>City</label><input class="rally-info" type="text" name="city">
+            <label>State</label><input class="rally-info" type="text" name="state">
+            <label>Postal Code</label><input class="rally-info" type="text" name="zip">
+          <button type="submit" id="rally-info">Submit</button>
         </form>
         <form class="base-kit">
           <h3> Emergency Kit Checklist </h3>
