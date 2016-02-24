@@ -40,7 +40,6 @@
     CurrentUser.saveData(userData);
   });
 
-
   $('.user-information').on('submit', function(e){
     e.preventDefault();
     $('.user-info').map(function(){
@@ -49,6 +48,20 @@
       }
     });
     $('.user-info').val('');
+    CurrentUser.saveData(userData);
+  });
+
+  $('.rally-point').on('submit', function(e){
+    e.preventDefault();
+    if(!CurrentUser.all.rallyInfo){
+      CurrentUser.all.rallyInfo = [];
+    }
+    $('.rally-info').map(function(){
+      if(this.value && this.value !== 'submit'){
+        CurrentUser.all.rallyInfo[this.name] = this.value;
+      }
+    })
+    $('.rally-info').val('');
     CurrentUser.saveData(userData);
   });
 
