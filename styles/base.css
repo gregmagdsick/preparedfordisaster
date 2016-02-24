@@ -2,13 +2,13 @@
   display: flex; }
 
 body {
-  background: linear-gradient(45deg, rgba(182, 66, 18, 0.8) 0%, rgba(233, 0, 0, 0.4) 100%); }
+  background-color: linear-gradient(45deg, rgba(182, 66, 18, 0.8) 0%, rgba(233, 0, 0, 0.4) 100%); }
 
 header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #7f7e78; }
+  background-color: #4BB612; }
   header img {
     max-height: 75px;
     margin: 1% 1%; }
@@ -70,7 +70,7 @@ header {
     .main-sec .sub-sec button {
       cursor: pointer;
       outline: none;
-      background: #4285F4;
+      background: #E90000;
       width: 100%;
       border: 0;
       border-radius: 4px;
@@ -96,7 +96,7 @@ header {
       margin: 1% 1%; }
   .base-kit button {
     outline: none;
-    background: #4285F4;
+    background: #E90000;
     width: 100%;
     border: 0;
     border-radius: 4px;
