@@ -24,8 +24,15 @@
     base64test.handle();
   });
 
+  $('#rally-button').on('submit', function(e){
+    e.preventDefault();
+    $('#rally-button').hide();
+    $('#rally-point').show();
+  });
+
   $('#emergenecy-info').on('submit', function(e){
     e.preventDefault();
+    if(!CurrentUser.all.lovedOnes){CurrentUser.all.lovedOnes = [];}
     var array = {};
     $('.emer-info').map(function(){
       if(this.value && this.value !== 'submit'){
@@ -67,10 +74,12 @@
 
   $('.base-kit').on('submit', function(e){
     e.preventDefault();
-    CurrentUser.all['userKit'] = $(':checkbox:checked').map(function(acc) {
-      return this.value;
+    var kitArray = [];
+    $(':checkbox:checked').each(function(acc) {
+      kitArray.push(this.value);
     });
-    $('.base-kit').children('input').removeAttr('checked');
+    CurrentUser.all.userKit = kitArray;
+    $('.user-kit').removeAttr('checked');
     CurrentUser.saveData(userData);
   });
 
