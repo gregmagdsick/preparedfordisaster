@@ -9,6 +9,22 @@
       <input type="checkbox" class='user-kit' name="{{item}}" value="{{item}}">{{item}} {{description}}<br>
     </script>
 
+    <script id='emergency-contact-template' type="text/x-handlebars-template">
+      <label>Relationship: </label><input class="emer-info" type="text" name="relationship">
+      <label>First Name: </label><input class="emer-info" type="text" name="firstName">
+      <label>Last Name: </label><input class="emer-info" type="text" name="lastName">
+      <label>Email Address: </label><input class="emer-info" type="text" name="email">
+      <label>Primary Phone: </label><input class="emer-info" type="text" name="primaryPhone">
+      <label>Secondary Phone: </label><input class="emer-info" type="text" name="secondaryPhone">
+      <h4> Address </h4>
+      <labe>Address Line 1 </label><input class="emer-info" type="text" name="lineOne">
+      <label>Address Line 2 </label><input class="emer-info" type="text" name="lineTwo">
+      <label>City </label><input class="emer-info" type="text" name="city">
+      <label>State </label><input class="emer-info" type="text" name="state">
+      <label>Zip/Postal Code </lable><input class="emer-info" type="text" name="zip">
+      <button type="submit">Submit</button>
+    </script>
+
   </head>
   <body>
     <header>
@@ -16,9 +32,11 @@
 
     <h3> Personal Information </h3>
     <form class="user-information">
-      First Name: <input class="user-info" type="text" name="firstname">
-      Last Name: <input class="user-info" type="text" name="lastname">
+      First Name: <input class="user-info" type="text" name="firstName">
+      Last Name: <input class="user-info" type="text" name="lastName">
       Email Address: <input class="user-info" type="text" name="email">
+      Primary Phone: <input class="user-info" type="text" name="primaryPhone">
+      Secondary Phone: <input class="user-info" type="text" name="secondaryPhone">
       <h4> Address </h4>
       <table>
         <tr><td>Address Line 1 <input class="user-info" type="text" name="line-one"></td></tr>
@@ -27,10 +45,14 @@
         <tr><td>State <input class="user-info" type="text" name="state"></td>
             <td>Zip/Postal Code <input class="user-info" type="text" name="zip"></td></tr>
       </table>
-      <input class="user-info" type="submit" value="submit">
+      <input type="submit" value="Submit">
     </form>
-
-
+    <h3>Emergency Contact</h3>
+    <form id="emergenecy-button">
+      <button class="emergency-info" type="submit">Create Emergency Contact</button>
+    </form>
+    <form id="emergenecy-info">
+    </form>
 
     <form class="base-kit">
     </form>

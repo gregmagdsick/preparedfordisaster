@@ -16,4 +16,7 @@ page('/about',
 page('/resources',
   controller.resources);
 
+page('/myplan',
+  controller.plan);
+
 page();

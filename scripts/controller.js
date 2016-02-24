@@ -26,6 +26,10 @@
     $('#additional-resources').show().siblings().hide();
   };
 
+  controller.plan = function() {
+    $('#edit-plan').show().siblings().hide();
+  };
+
 
 
 
