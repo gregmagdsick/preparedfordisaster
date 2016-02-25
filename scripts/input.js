@@ -1,15 +1,15 @@
-(function(module){
+(function(module) {
 
   var userInput = [];
   userInput.kitData = function() {
     $.getJSON('data/baseKit.json')
-    .done(function(data){
-      userInput.all = data;
-      userInput.all.forEach(function(ele){
-        $('.base-kit').append(userInput.toHtml(ele, '#check-box-template'));
+      .done(function(data) {
+        userInput.all = data;
+        userInput.all.forEach(function(ele) {
+          $('.base-kit').append(userInput.toHtml(ele, '#check-box-template'));
+        });
+        $('.base-kit').append('<button type="submit">Submit</button>');
       });
-      $('.base-kit').append('<button type="submit">Submit</button>');
-    });
   };
 
   userInput.toHtml = function(ele, id) {
@@ -17,40 +17,40 @@
     return template(ele);
   };
 
-  $('#emergenecy-button').on('submit', function(e){
+  $('#emergenecy-button').on('submit', function(e) {
     e.preventDefault();
     $('#emergenecy-button').hide();
-    $('#emergenecy-info').show().append(userInput.toHtml('','#emergency-contact-template'));
+    $('#emergenecy-info').show().append(userInput.toHtml('', '#emergency-contact-template'));
     base64test.handle();
   });
 
-  $('#rally-button').on('submit', function(e){
+  $('#rally-button').on('submit', function(e) {
     e.preventDefault();
     $('#rally-button').hide();
     $('#rally-point').show();
   });
 
-  $('#emergenecy-info').on('submit', function(e){
+  $('#emergenecy-info').on('submit', function(e) {
     e.preventDefault();
-    if(!CurrentUser.all.lovedOnes){CurrentUser.all.lovedOnes = [];}
+    if (!CurrentUser.all.lovedOnes) {
+      CurrentUser.all.lovedOnes = [];
+    }
     var array = {};
-    $('.emer-info').map(function(){
-      if(this.value && this.value !== 'submit'){
+    $('.emer-info').map(function() {
+      if (this.value && this.value !== 'submit') {
         array[this.name] = this.value;
       }
     });
-    var otherContact = {};
-    otherContact[array.firstName.toLowerCase()] = array;
-    CurrentUser.all.lovedOnes.push(otherContact);
+    CurrentUser.all.lovedOnes.push(array);
     $('.emer-info').val('');
-    $('#emergenecy-info').prepend('<p>'+ array.firstName + ' ' + array.lastName + ' added</p>');
+    $('#emergenecy-info').prepend('<p>' + array.firstName + ' ' + array.lastName + ' added</p>');
     CurrentUser.saveData(userData);
   });
 
-  $('.user-information').on('submit', function(e){
+  $('.user-information').on('submit', function(e) {
     e.preventDefault();
-    $('.user-info').map(function(){
-      if(this.value && this.value !== 'submit'){
+    $('.user-info').map(function() {
+      if (this.value && this.value !== 'submit') {
         CurrentUser.all[this.name] = this.value;
       }
     });
@@ -58,21 +58,21 @@
     CurrentUser.saveData(userData);
   });
 
-  $('.rally-point').on('submit', function(e){
+  $('.rally-point').on('submit', function(e) {
     e.preventDefault();
-    if(!CurrentUser.all.rallyInfo){
+    if (!CurrentUser.all.rallyInfo) {
       CurrentUser.all.rallyInfo = [];
     }
-    $('.rally-info').map(function(){
-      if(this.value && this.value !== 'submit'){
+    $('.rally-info').map(function() {
+      if (this.value && this.value !== 'submit') {
         CurrentUser.all.rallyInfo[this.name] = this.value;
       }
-    })
+    });
     $('.rally-info').val('');
     CurrentUser.saveData(userData);
   });
 
-  $('.base-kit').on('submit', function(e){
+  $('.base-kit').on('submit', function(e) {
     e.preventDefault();
     var kitArray = [];
     $(':checkbox:checked').each(function(acc) {
