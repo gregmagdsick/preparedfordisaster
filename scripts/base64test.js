@@ -12,7 +12,6 @@
       };
     }
 
-
     base64test.handle = function() {
       $('#inputFileToLoad').change(encodeImageFileAsURL(function(base64Img) {
           console.log(base64Img);

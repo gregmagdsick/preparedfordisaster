@@ -6,8 +6,6 @@
   <title>Prepared for Disaster</title>
   <link rel="stylesheet" href="vendor/normalize.css">
   <link rel="stylesheet" href="styles/base.css" media="screen" title="no title" charset="utf-8">
-  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
 
 
   <script id="check-box-template" type="text/x-handlebars-template">
@@ -37,7 +35,6 @@
 
     <script id="final-emergency-plan-form-template" type="text/x-handlebars-template">
       <div class="emergency-contact-plan">
-
         <h2>User Information</h2>
         <p>Hello, {{firstName}} <br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is your current emergency preparedness plan for you and your family to help safeguard during times of emergency: </p>
         <p>First Name: {{firstName}} Last Name: {{lastName}} </p>
@@ -54,8 +51,8 @@
 
     <script id="final-emergency-plan-lovedones-template" type="text/x-handlebars-template">
       <div class="emergency-contact-plan">
-        <h2>Emergency Contact</h2>
-        <p>Household Member: {{firstName}}</p>
+        <h2>Emergency Contact Information</h2>
+        <p>First Household Member: {{firstName}}</p>
         <p>Relationship: {{relationship}}</p>
         <p>Age: {{age}}</p>
         <p>Email {{mail}}</p>
@@ -137,10 +134,6 @@
             <button type="submit" id="authorize-button">Email me my plan</button>
             <button type="submit" id="create-plan">Edit or create my disaster plan</button>
           </div>
-          <div id="homepage-plan">
-            
-          </div>
-
         </section>
 
         <section class="flexbox edit-plan main-sec" id="edit-plan">
@@ -196,7 +189,11 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
       <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
       <script src="https://apis.google.com/js/client.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.js"></script> -->
       <script src="/socket.io/socket.io.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.js"></script> -->
+      <!-- <script src="vendor/scripts/nodemailer.js"></script> -->
+
 
 
 
@@ -206,9 +203,11 @@
       <script src="scripts/authorization.js"></script>
       <script src="scripts/userData.js"></script>
       <script src="scripts/input.js"></script>
-      <script src="scripts/emailer.js"></script>
       <script src="scripts/controller.js"></script>
-      <script src="scripts/base64test.js"></script>
+      <!-- <script src="scripts/base64test.js"></script> -->
+
+      <script src="scripts/emailer.js"></script>
+
       <script src="scripts/routes.js"></script>
     </body>
     </html>
