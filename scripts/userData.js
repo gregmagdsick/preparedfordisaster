@@ -24,6 +24,7 @@
         $('#homepage').append(home.render(CurrentUser.all, '#final-emergency-plan-rally-template'));
         $('#homepage').append(home.render(CurrentUser.all, '#final-emergency-plan-userkit-template'));
         $('#edit-plan').prepend(userInput.toHtml(CurrentUser.all, '#personal-info'));
+        $('#rally-point').append(userInput.toHtml(CurrentUser.all, '#rally-info'));
       }
       else{
         console.log('No existing data');
