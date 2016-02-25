@@ -135,6 +135,9 @@
             <button type="submit" id="authorize-button">Email me my plan</button>
             <button type="submit" id="create-plan">Edit or create my disaster plan</button>
           </div>
+          <div id="homepage-plan">
+            
+          </div>
 
         </section>
 
@@ -164,10 +167,10 @@
           </form>
           <form class="rally-point sub-sec">
             <h4>Immediate Rally Point</h4>
-            <input type="text" name="immediate-rally" class="rally-info" placeholder="location across the street" name="immediate-rally">
+            <input type="text" name="immediate-rally" class="rally-info" placeholder="location across the street">
             <h4>Out of neighborhood rally point</h4>
             <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" >
-            <label>Address Line 2</label><input class="rally-info" ="text" name="lineTwo" >
+            <label>Address Line 2</label><input class="rally-info" type="text" name="lineTwo" >
             <label>City</label><input class="rally-info" type="text" name="city">
             <label>State</label><input class="rally-info" type="text" name="state">
             <label>Postal Code</label><input class="rally-info" type="text" name="zip">
@@ -191,6 +194,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
       <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
       <script src="https://apis.google.com/js/client.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+
 
 
       <script src="scripts/login.js"></script>
@@ -199,6 +204,7 @@
       <script src="scripts/authorization.js"></script>
       <script src="scripts/userData.js"></script>
       <script src="scripts/input.js"></script>
+      <script src="scripts/emailer.js"></script>
       <script src="scripts/controller.js"></script>
       <script src="scripts/base64test.js"></script>
       <script src="scripts/routes.js"></script>
