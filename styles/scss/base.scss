@@ -16,6 +16,7 @@ $our-brown: #834B34;
 body {
   background-color: linear-gradient(45deg,  rgba(182, 66, 18,0.8) 0%,rgba(233, 0, 0,0.4) 100%);
   // background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
+  font-family: 'Arimo', sans-serif;
 }
 
 header {
@@ -37,6 +38,7 @@ header {
         text-decoration: none;
         color: white;
         font-size: 1.5em;
+        font-family: 'Sanchez', serif;
 
       }
     }
@@ -148,4 +150,8 @@ header {
     cursor: pointer;
     margin: 2% 0;
   }
+}
+
+.emergency-contact-plan {
+  width: 70%;
 }
