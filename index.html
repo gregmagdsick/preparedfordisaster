@@ -17,6 +17,37 @@
     </div>
   </script>
 
+  <script id="personal-info" type="text/x-handlebars-template">
+    <form class="user-information sub-sec">
+      <h3> Personal Information </h3>
+      <label>First Name</label><input class="user-info" type="text" name="firstName" value="{{firstName}}">
+      <label>Last Name</label><input class="user-info" type="text" name="lastName" value="{{lastName}}">
+      <label>Email</label><input class="user-info" type="email" name="email" value="{{email}}">
+      <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone" value="{{primaryPhone}}">
+      <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone" value="{{secondaryPhone}}">
+      <h4> Address </h4>
+      <label>Address Line 1</label><input class="user-info" type="text" name="lineOne" value="{{lineOne}}">
+      <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo" value="{{lineTwo}}">
+      <label>City</label><input class="user-info" type="text" name="city" value="{{city}}">
+      <label>State</label><input class="user-info" type="text" name="state" value="{{state}}">
+      <label>Postal Code</label><input class="user-info" type="text" name="zip" value="{{zip}}">
+      <button type="submit" id="user-info">Submit</button>
+    </form>
+  </script>
+<script id="rally-info" type="text/x-handlebars-template">
+  <form class="rally-point sub-sec">
+    <h4>Immediate Rally Point</h4>
+    <input type="text" name="immediate-rally" class="rally-info" placeholder="location across the street" name="immediate-rally" value="{{rallyInfo.immediate-rally}}">
+    <h4>Out of neighborhood rally point</h4>
+    <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" value="{{rallyInfo.lineOne}}">
+    <label>Address Line 2</label><input class="rally-info" ="text" name="lineTwo" value="{{rallyInfo.lineTwo}}">
+    <label>City</label><input class="rally-info" type="text" name="city">
+    <label>State</label><input class="rally-info" type="text" name="state">
+    <label>Postal Code</label><input class="rally-info" type="text" name="zip">
+    <button type="submit" id="rally-info">Submit</button>
+  </form>
+</script>
+
   <script id="emergency-contact-template" type="text/x-handlebars-template">
     <h3>Household Member</h3>
     <label>Headshot of Contact</label><img src="" alt="" /><input id="inputFileToLoad" type="file"; />
@@ -141,21 +172,7 @@
         </section>
 
         <section class="flexbox edit-plan main-sec" id="edit-plan">
-          <form class="user-information sub-sec">
-            <h3> Personal Information </h3>
-            <label>First Name</label><input class="user-info" type="text" name="firstName">
-            <label>Last Name</label><input class="user-info" type="text" name="lastName">
-            <label>Email</label><input class="user-info" type="email" name="email">
-            <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
-            <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
-            <h4> Address </h4>
-            <label>Address Line 1</label><input class="user-info" type="text" name="lineOne">
-            <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo">
-            <label>City</label><input class="user-info" type="text" name="city">
-            <label>State</label><input class="user-info" type="text" name="state">
-            <label>Postal Code</label><input class="user-info" type="text" name="zip">
-            <button type="submit" id="user-info">Submit</button>
-          </form>
+
           <form id="emergenecy-button" class="sub-sec">
             <button class="emergency-info" type="submit">Create Household Member</button>
           </form>
@@ -164,17 +181,8 @@
           <form id="rally-button" class="sub-sec">
             <button class="rally-point" type="submit">Set Rally Points</button>
           </form>
-          <form class="rally-point sub-sec">
-            <h4>Immediate Rally Point</h4>
-            <input type="text" name="immediate-rally" class="rally-info" placeholder="location across the street" name="immediate-rally">
-            <h4>Out of neighborhood rally point</h4>
-            <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" >
-            <label>Address Line 2</label><input class="rally-info" ="text" name="lineTwo" >
-            <label>City</label><input class="rally-info" type="text" name="city">
-            <label>State</label><input class="rally-info" type="text" name="state">
-            <label>Postal Code</label><input class="rally-info" type="text" name="zip">
-            <button type="submit" id="rally-info">Submit</button>
-          </form>
+          <article id="rally-point"></article>
+
           <form class="base-kit">
             <h3> Emergency Kit Checklist </h3>
           </form>
