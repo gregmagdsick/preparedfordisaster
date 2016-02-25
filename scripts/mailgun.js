@@ -1,27 +1,18 @@
 (function(module) {
 
-var api_key = 'xxxxxxx';
-var domain = 'xxxxxxxx';
-
-var Mailgun = require('mailgun-js');
-
-exports.sendOne = function (locals,callback) {
-
-  console.log(locals);
-  var mailgun = new Mailgun({apiKey: api_key,domain:domain});
+  var api_key = 'key-ea46ea5ec65f6e1bcba2123190676eee';
+  var domain = 'sandbox338cba8fefcc493294229f5699c9acff.mailgun.org';
+  var mailgun = require(['mailgun-js'])({apiKey: api_key, domain: domain});
 
   var data = {
-  from: 'xxxxxx',
-  to: 'myemail@hotmail.com',
-  subject: 'Hello World',
-  text: 'Testing some Mailgun awesomness!'
-};
+    from: 'Excited User <me@samples.mailgun.org>',
+    to: 'serobnic@mail.ru',
+    subject: 'Hello',
+    text: 'Testing some Mailgun awesomness!'
+  };
 
-mailgun.message().send(data,function (err,body) {
-  if(err) return callback(err);
-  console.log('message sent');
-  callback(null,body);
+  mailgun.messages().send(data, function (error, body) {
+    console.log(body);
   });
-};
 
 })(window);
