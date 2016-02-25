@@ -9,6 +9,6 @@ $('#authorize-button').on('click',function() {
     html: '' // html body
   };
 
-  var socket = io('http://localhost');
-  socket.emit('emailResponse',mailOptions);
-})
+  var socket = io();
+  socket.emit('emailResponse', mailOptions);
+});
