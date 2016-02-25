@@ -15,6 +15,24 @@
     </div>
   </script>
 
+  <script id="personal-info" type="text/x-handlebars-template">
+    <form class="user-information sub-sec">
+      <h3> Personal Information </h3>
+      <label>First Name{{firstName}}</label><input class="user-info" type="text" name="firstName" value="{{firstName}}">
+      <label>Last Name</label><input class="user-info" type="text" name="lastName" value="{{lastName}}">
+      <label>Email</label><input class="user-info" type="email" name="email" value="{{email}}">
+      <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone" value="{{primaryPhone}}">
+      <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone" value="{{secondaryPhone}}">
+      <h4> Address </h4>
+      <label>Address Line 1</label><input class="user-info" type="text" name="lineOne">
+      <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo">
+      <label>City</label><input class="user-info" type="text" name="city">
+      <label>State</label><input class="user-info" type="text" name="state">
+      <label>Postal Code</label><input class="user-info" type="text" name="zip">
+      <button type="submit" id="user-info">Submit</button>
+    </form>
+  </script>
+
   <script id="emergency-contact-template" type="text/x-handlebars-template">
     <h3>Household Member</h3>
     <label>Headshot of Contact</label><img src="" alt="" /><input id="inputFileToLoad" type="file"; />
@@ -139,21 +157,7 @@
         </section>
 
         <section class="flexbox edit-plan main-sec" id="edit-plan">
-          <form class="user-information sub-sec">
-            <h3> Personal Information </h3>
-            <label>First Name</label><input class="user-info" type="text" name="firstName">
-            <label>Last Name</label><input class="user-info" type="text" name="lastName">
-            <label>Email</label><input class="user-info" type="email" name="email">
-            <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
-            <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
-            <h4> Address </h4>
-            <label>Address Line 1</label><input class="user-info" type="text" name="lineOne">
-            <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo">
-            <label>City</label><input class="user-info" type="text" name="city">
-            <label>State</label><input class="user-info" type="text" name="state">
-            <label>Postal Code</label><input class="user-info" type="text" name="zip">
-            <button type="submit" id="user-info">Submit</button>
-          </form>
+
           <form id="emergenecy-button" class="sub-sec">
             <button class="emergency-info" type="submit">Create Household Member</button>
           </form>
