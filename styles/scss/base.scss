@@ -31,16 +31,21 @@ header {
   nav {
     width: 80%;
     ul {
-      justify-content: space-around;
+      justify-content: flex-end;
       list-style-type: none;
-      margin: 0;
-      a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.5em;
-        font-family: 'Sanchez', serif;
+      li{
+        margin-left: 2%;
+        margin-right: 2%;
 
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.5em;
+          font-family: 'Sanchez', serif;
+        }
       }
+
     }
   }
 }
@@ -154,4 +159,11 @@ header {
 
 .emergency-contact-plan {
   width: 70%;
+  flex-direction: column;
+  margin: 0 20%;
+  line-height: 1.5;
+
+  span {
+    font-weight: bolder;
+  }
 }

@@ -36,55 +36,55 @@
     </script>
 
     <script id="final-emergency-plan-form-template" type="text/x-handlebars-template">
-      <div class="emergency-contact-plan">
+      <div class= "flexbox emergency-contact-plan">
 
         <h2>User Information</h2>
-        <p>Hello, {{firstName}} <br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is your current emergency preparedness plan for you and your family to help safeguard during times of emergency: </p>
-        <p>First Name: {{firstName}} Last Name: {{lastName}} </p>
-        <p>Email: {{email}} </p>
-        <p>Address: {{lineOne}} </p>
-        <p>City: {{city}} </p>
-        <p>State: {{state}} </p>
-        <p>Zip Code: {{zip}} </p>
-        <p>Primary Phone: {{primaryPhone}} </p>
-        <p>Secondary Phone: {{secondaryPhone}} </p>
+        <p>Hello, <span>{{firstName}}</span>, <br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is your current emergency preparedness plan for you and your family to help safeguard during times of emergency:<br />
+        <span>First Name:</span> {{firstName}} <span>Last Name:</span> {{lastName}} </br >
+        <span>Email:</span> {{email}}</br >
+        <span>Address: </span>{{lineOne}}</br >
+        <span>City:</span> {{city}}</br >
+        <span>State:</span> {{state}}</br >
+        <span>Zip Code: </span>{{zip}}</br >
+        <span>Primary Phone: </span>{{primaryPhone}}</br >
+        <span>Secondary Phone:</span> {{secondaryPhone}} </p>
       </div>
 
     </script>
 
     <script id="final-emergency-plan-lovedones-template" type="text/x-handlebars-template">
-      <div class="emergency-contact-plan">
+      <div class="flexbox emergency-contact-plan">
         <h2>Emergency Contact</h2>
-        <p>Household Member: {{firstName}}</p>
-        <p>Relationship: {{relationship}}</p>
-        <p>Age: {{age}}</p>
-        <p>Email {{mail}}</p>
-        <p>Primary Phone: {{primaryPhone}}</p>
-        <p>Address: {{lineOne}}</p>
-        <p>City: {{city}}</p>
-        <p>State {{state}}</p>
-        <p>Zip Code: {{zip}}</p>
+        <p><span>Household Member: </span>{{firstName}} {{lastName}}</br >
+        <span>Relationship: </span>{{relationship}}</br >
+        <span>Age: </span>{{age}}</br >
+        <span>Email </span>{{mail}}</br >
+        <span>Primary Phone:</span> {{primaryPhone}}</br >
+        <span>Address: </span> {{lineOne}}</br >
+        <span>City: </span> {{city}}</br >
+        <span>State </span>{{state}}</br >
+        <span>Zip Code:</span> {{zip}}</p>
       </div>
     </script>
 
       <script id="final-emergency-plan-rally-template" type="text/x-handlebars-template">
-        <div class="emergency-contact-plan">
+        <div class="flexbox emergency-contact-plan">
           {{#with rallyInfo}}
           <h2>Rally Information</h2>
-          <p>Immediate-Rally Location: {{immediate-rally}}</p>
+          <p><span>Immediate-Rally Location: </span> {{immediate-rally}}</br >
           <h3>Out of Neighborhood Rally Point</h3>
-          <p>Address: {{lineOne}}</p>
-          <p>City: {{city}}</p>
-          <p>State: {{state}}</p>
-          <p>Zip Code: {{zip}}</p>
+          <span>Address: </span>{{lineOne}}</br >
+          <span>City: </span>{{city}}</br >
+          <span>State: </span>{{state}}</br >
+          <span>Zip Code: </span>{{zip}}</p>
           {{/with}}
         </div>
       </script>
       <script id="final-emergency-plan-userkit-template" type="text/x-handlebars-template">
-        <div class="emergency-contact-plan">
+        <div class="flexbox emergency-contact-plan">
           <h2>User Kits</h2>
           {{#each userKit}}
-          <p>{{this}}</p>
+          {{this}}</br >
           {{/each}}
         </div>
       </script>
@@ -138,7 +138,7 @@
             <button type="submit" id="create-plan">Edit or create my disaster plan</button>
           </div>
           <div id="homepage-plan">
-            
+
           </div>
 
         </section>
@@ -195,16 +195,11 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.6.4/page.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
       <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
-      <script src="https://apis.google.com/js/client.js"></script>
       <script src="/socket.io/socket.io.js"></script>
-
-
 
       <script src="scripts/login.js"></script>
       <script src="scripts/userData.js"></script>
       <script src="scripts/home.js"></script>
-      <script src="scripts/authorization.js"></script>
-      <script src="scripts/userData.js"></script>
       <script src="scripts/input.js"></script>
       <script src="scripts/emailer.js"></script>
       <script src="scripts/controller.js"></script>
