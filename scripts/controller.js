@@ -28,10 +28,9 @@
     $('#additional-resources').show().siblings().hide();
   };
 
-  controller.plan = function(callback) {
+  controller.plan = function() {
     login.check();
     $('#edit-plan').show().siblings().hide();
-    callback;
   };
 
 
