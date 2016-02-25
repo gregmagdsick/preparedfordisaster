@@ -2,7 +2,8 @@
   display: flex; }
 
 body {
-  background-color: linear-gradient(45deg, rgba(182, 66, 18, 0.8) 0%, rgba(233, 0, 0, 0.4) 100%); }
+  background-color: linear-gradient(45deg, rgba(182, 66, 18, 0.8) 0%, rgba(233, 0, 0, 0.4) 100%);
+  font-family: 'Arimo', sans-serif; }
 
 header {
   justify-content: space-between;
@@ -15,13 +16,16 @@ header {
   header nav {
     width: 80%; }
     header nav ul {
-      justify-content: space-around;
-      list-style-type: none;
-      margin: 0; }
-      header nav ul a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.5em; }
+      justify-content: flex-end;
+      list-style-type: none; }
+      header nav ul li {
+        margin-left: 2%;
+        margin-right: 2%; }
+        header nav ul li a {
+          text-decoration: none;
+          color: white;
+          font-size: 1.5em;
+          font-family: 'Sanchez', serif; }
 
 .main-sec {
   flex-direction: column;
@@ -109,5 +113,13 @@ header {
     text-transform: uppercase;
     cursor: pointer;
     margin: 2% 0; }
+
+.emergency-contact-plan {
+  width: 70%;
+  flex-direction: column;
+  margin: 0 20%;
+  line-height: 1.5; }
+  .emergency-contact-plan span {
+    font-weight: bolder; }
 
 /*# sourceMappingURL=base.css.map */
