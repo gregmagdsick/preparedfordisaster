@@ -1,12 +1,11 @@
 $('#authorize-button').on('click',function() {
 
-  // setup e-mail data with unicode symbols
   var mailOptions = {
-    from: 'jmcclena94@gmail.com', // sender address
-    to: 'jmcclena94@gmail.com', // list of receivers
-    subject: 'test1', // Subject line
-    text: 'test1', // plaintext body
-    html: '' // html body
+    from: 'jmcclena94@gmail.com',
+    to: 'jmcclena94@gmail.com',
+    subject: 'test1',
+    text: 'test1',
+    html: ''
   };
 
   var socket = io();

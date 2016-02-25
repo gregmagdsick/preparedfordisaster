@@ -2,7 +2,10 @@ var requestProxy = require('express-request-proxy'),
   express = require('express'),
   port = process.env.PORT || 3000,
   app = express(),
-  server = require('http').createServer(app);
+  nodemailer = require('nodemailer'),
+  smtpTransport = require('nodemailer-smtp-transport'),
+  server = require('http').createServer(app),
+  io = require('socket.io')(server);
 
 app.use(express.static('./'));
 
@@ -15,9 +18,9 @@ server.listen(port, function() {
   console.log('Server started on port ' + port + '!');
 });
 
-var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
-var io = require('socket.io')(server);
+// var nodemailer = require('nodemailer');
+// var smtpTransport = require('nodemailer-smtp-transport');
+// var io = require('socket.io')(server);
 
 var options = {
     service: 'gmail',
