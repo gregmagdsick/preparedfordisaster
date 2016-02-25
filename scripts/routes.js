@@ -17,8 +17,7 @@ page('/resources',
   controller.resources);
 
 page('/myplan',
-  controller.plan,
-  userInput.planData(),
+  controller.plan(),
   userInput.kitData());
 
 page();

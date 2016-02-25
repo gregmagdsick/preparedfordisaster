@@ -12,11 +12,6 @@
       });
   };
 
-  userInput.planData = function() {
-    console.log(CurrentUser.all);
-    $('#edit-plan').prepend(userInput.toHtml(CurrentUser.all, '#personal-info'));
-  };
-
   userInput.toHtml = function(ele, id) {
     var template = Handlebars.compile($(id).text());
     return template(ele);
