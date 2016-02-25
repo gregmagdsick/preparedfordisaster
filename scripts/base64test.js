@@ -15,7 +15,7 @@
   base64test.handle = function () {
     $('#inputFileToLoad').change(encodeImageFileAsURL(function(base64Img) {
       console.log(base64Img);
-      $('#emergenecy-info').find('img').attr('src', base64Img)});
+      $('#emergenecy-info').find('img').attr('src', base64Img)}));
   };
     module.base64test = base64test;
 })(window);
