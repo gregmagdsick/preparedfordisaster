@@ -1,9 +1,9 @@
 (function(module) {
   'use strict';
-//***test variables and functions, to be deleted***
+  //***test variables and functions, to be deleted***
 
 
-// ***end delete test section***
+  // ***end delete test section***
   CurrentUser.all = {};
   //creates a new object for the user with properties to match data input
   function CurrentUser(ops) {
@@ -19,7 +19,10 @@
         $('.emergency-contact-plan').remove();
         CurrentUser.all = new CurrentUser(snapshot.val());
         $('#homepage').append(home.render(CurrentUser.all, '#final-emergency-plan-form-template'));
-
+        CurrentUser.all.lovedOnes.forEach(function(a) {$('#homepage').append(home.render(a, '#final-emergency-plan-lovedones-template'));
+      });
+        $('#homepage').append(home.render(CurrentUser.all, '#final-emergency-plan-rally-template'));
+        $('#homepage').append(home.render(CurrentUser.all, '#final-emergency-plan-userkit-template'));
       }
       else{
         console.log('No existing data');
