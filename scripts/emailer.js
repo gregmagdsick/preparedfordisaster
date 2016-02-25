@@ -1,11 +1,11 @@
 $('#authorize-button').on('click',function() {
 
   var mailOptions = {
-    from: 'jmcclena94@gmail.com',
-    to: 'jmcclena94@gmail.com',
-    subject: 'test1',
-    text: 'test1',
-    html: ''
+    from: 'info.preparedfordisaster@gmail.com',
+    to: CurrentUser.all.email,
+    subject: 'Your Emergency Disaster Plan',
+    text: '',
+    html: $('#homepage-plan').html()
   };
 
   var socket = io();
