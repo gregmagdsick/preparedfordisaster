@@ -37,8 +37,5 @@
     $('#edit-plan').show().siblings().hide();
   };
 
-
-
-
   module.controller = controller;
 })(window);
