@@ -34,6 +34,7 @@
 
   controller.plan = function() {
     login.check();
+    userInput.loadStorage();
     $('#edit-plan').show().siblings().hide();
   };
 

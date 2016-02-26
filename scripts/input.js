@@ -93,11 +93,12 @@
     CurrentUser.saveData(userData);
     window.location = '/home';
   });
-
-  if(localStorage.CurrentUser){
-    CurrentUser.all = (JSON.parse(localStorage.CurrentUser));
-  }
-  $('#personal-info').append(userInput.toHtml(CurrentUser.all, '#personal-info-template'));
+  userInput.loadStorage = function () {
+    if(localStorage.CurrentUser){
+      CurrentUser.all = (JSON.parse(localStorage.CurrentUser));
+    }
+    $('#personal-info').append(userInput.toHtml(CurrentUser.all, '#personal-info-template'));
+  };
 
   module.userInput = userInput;
 }(window));
