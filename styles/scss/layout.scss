@@ -1,5 +1,5 @@
 $margin: 0px 30px 30px 30px;
-$background-color: white;
+$background-color: rgba(255, 255, 255, 0.9);
 $text-color: black;
 $our-dark-green: #4BB612;
 $our-red: #E90000;
@@ -7,23 +7,16 @@ $our-light-green: #3BEC3B;
 $our-orange: #B64212;
 $our-brown: #834B34;
 
-
-
 .flexbox {
   display: flex;
 }
-
-// header {
-//   width: 100%;
-//   background-color: $our-dark-green;
-// }
 
 .main-sec {
   flex-direction: column;
   align-items: center;
   position: relative;
   z-index: 15;
-  background: white;
+  background: $background-color;
   width: 80%;
   max-width: 500px;
   border-radius: 4px;
@@ -31,6 +24,7 @@ $our-brown: #834B34;
   box-sizing: border-box;
   margin: 100px auto 10px;
   overflow: hidden;
+  padding: 20px;
 
   .sub-sec {
     flex-wrap: wrap;
