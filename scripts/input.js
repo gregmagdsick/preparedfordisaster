@@ -31,6 +31,7 @@
 
   $('#rally-button').on('submit', function(e) {
     e.preventDefault();
+    $('#rally').append(userInput.toHtml(CurrentUser.all,'#rally-info'));
     $('#rally-button').hide();
     $('#rally').show();
   });

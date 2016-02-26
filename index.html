@@ -27,6 +27,18 @@
       <button type="submit" id="user-info">Submit</button>
   </script>
 
+  <script id="rally-info" type="text/x-handlebars-template">
+      <h4>Immediate Rally Point</h4>
+      <input type="text" name="immediate-rally" class="rally-info" value="{{rallyinfo.immediate-rally}}">
+      <h4>Out of neighborhood rally point</h4>
+      <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" value="{{rallyInfo.lineOne}}">
+      <label>Address Line 2</label><input class="rally-info" type="text" name="lineTwo" value="{{rallyInfo.lineTwo}}">
+      <label>City</label><input class="rally-info" type="text" name="city" value="{{rallyInfo.city}}">
+      <label>State</label><input class="rally-info" type="text" name="state" value="{{rallyInfo.state}}">
+      <label>Postal Code</label><input class="rally-info" type="text" name="zip" value="{{rallyInfo.zip}}">
+      <button type="submit" id="rally-info">Submit</button>
+  </script>
+
   <script id="check-box-template" type="text/x-handlebars-template">
     <div class="flexbox">
       <input type="checkbox" class="user-kit" id="{{item}}" name="{{item}}" value="{{item}}">
@@ -56,7 +68,7 @@
       <div class= "flexbox emergency-contact-plan">
 
         <h2>User Information</h2>
-        <p>Hello, <span>{{firstName}}</span>, <br /> Thank you for selecting Preparedness For Disaster as your choice on preparing you for any potential natural threats. Here is your current emergency preparedness plan for you and your family to help safeguard during times of emergency:<br />
+        <p>Hello, <span>{{firstName}}</span>, <br /> Thank you for selecting Prepared for Disaster as your choice for making your emergency preparedness plan. Here is your current emergency preparedness plan for you and your family to help safeguard during times of emergency:<br />
         <span>First Name:</span> {{firstName}} <span>Last Name:</span> {{lastName}} </br >
         <span>Email:</span> {{email}}</br >
         <span>Address: </span>{{lineOne}}</br >
@@ -181,15 +193,6 @@
             <button class="rally-point" type="submit">Set Rally Points</button>
           </form>
           <form class="rally-point sub-sec" id="rally">
-            <h4>Immediate Rally Point</h4>
-            <input type="text" name="immediate-rally" class="rally-info" placeholder="location across the street">
-            <h4>Out of neighborhood rally point</h4>
-            <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" >
-            <label>Address Line 2</label><input class="rally-info" type="text" name="lineTwo" >
-            <label>City</label><input class="rally-info" type="text" name="city">
-            <label>State</label><input class="rally-info" type="text" name="state">
-            <label>Postal Code</label><input class="rally-info" type="text" name="zip">
-            <button type="submit" id="rally-info">Submit</button>
           </form>
           <form class="base-kit">
             <h3> Emergency Kit Checklist </h3>
