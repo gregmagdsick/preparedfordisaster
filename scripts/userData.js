@@ -21,7 +21,9 @@
           });
         }
         $('#homepage-plan').append(home.render(CurrentUser.all, '#final-emergency-plan-rally-template'));
-        $('#homepage-plan').append(home.render(CurrentUser.all, '#final-emergency-plan-userkit-template'));
+        if (CurrentUser.all.userKit){
+          $('#homepage-plan').append(home.render(CurrentUser.all, '#final-emergency-plan-userkit-template'));
+        };
         localStorage.setItem('CurrentUser', JSON.stringify(CurrentUser.all));
       }
       else{
