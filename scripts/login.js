@@ -71,7 +71,6 @@
       userData.uid = authData.uid;
       module.userData = userData.uid;
       CurrentUser.pullData(authData.uid);
-      // window.location = '/home';
     } else {
       window.location = '/';
     }
