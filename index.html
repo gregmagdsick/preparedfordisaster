@@ -29,13 +29,13 @@
 
   <script id="rally-info" type="text/x-handlebars-template">
       <h4>Immediate Rally Point</h4>
-      <input type="text" name="immediate-rally" class="rally-info" placeholder="location across the street">
+      <input type="text" name="immediate-rally" class="rally-info" value="{{rallyinfo.immediate-rally}}">
       <h4>Out of neighborhood rally point</h4>
-      <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" >
-      <label>Address Line 2</label><input class="rally-info" type="text" name="lineTwo" >
-      <label>City</label><input class="rally-info" type="text" name="city">
-      <label>State</label><input class="rally-info" type="text" name="state">
-      <label>Postal Code</label><input class="rally-info" type="text" name="zip">
+      <label>Address Line 1</label><input class="rally-info" type="text" name="lineOne" value="{{rallyInfo.lineOne}}">
+      <label>Address Line 2</label><input class="rally-info" type="text" name="lineTwo" value="{{rallyInfo.lineTwo}}">
+      <label>City</label><input class="rally-info" type="text" name="city" value="{{rallyInfo.city}}">
+      <label>State</label><input class="rally-info" type="text" name="state" value="{{rallyInfo.state}}">
+      <label>Postal Code</label><input class="rally-info" type="text" name="zip" value="{{rallyInfo.zip}}">
       <button type="submit" id="rally-info">Submit</button>
   </script>
 
