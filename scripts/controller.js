@@ -2,7 +2,6 @@
   controller = {};
 
   controller.landing = function() {
-    // login.check();
     $('#landing-page').show().siblings().hide();
   };
 
