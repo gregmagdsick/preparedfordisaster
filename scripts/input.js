@@ -17,6 +17,11 @@
     return template(ele);
   };
 
+  function success(className){
+    $(className).append('<p class="success">Submission Successful</p>');
+    $('.success').fadeOut(1500);
+  }
+
   $('#emergenecy-button').on('submit', function(e) {
     e.preventDefault();
     $('#emergenecy-button').hide();
@@ -44,6 +49,7 @@
     CurrentUser.all.lovedOnes.push(array);
     $('.emer-info').val('');
     $('#emergenecy-info').prepend('<p>' + array.firstName + ' ' + array.lastName + ' added</p>');
+    success('#emergenecy-info')
     CurrentUser.saveData(userData);
   });
 
@@ -55,6 +61,7 @@
       }
     });
     $('.user-info').val('');
+    success('.user-information');
     CurrentUser.saveData(userData);
   });
 
@@ -69,6 +76,7 @@
       }
     });
     $('.rally-info').val('');
+    success('.rally-point');
     CurrentUser.saveData(userData);
   });
 
@@ -80,7 +88,9 @@
     });
     CurrentUser.all.userKit = kitArray;
     $('.user-kit').removeAttr('checked');
+    success('.base-kit');
     CurrentUser.saveData(userData);
+    window.location = '/home';
   });
 
   module.userInput = userInput;
