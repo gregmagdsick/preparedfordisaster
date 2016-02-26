@@ -12,6 +12,7 @@
 
   controller.logout = function() {
     login.logout();
+    localStorage.CurrentUser = [];
   };
 
   controller.register = function() {
