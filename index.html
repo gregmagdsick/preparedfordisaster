@@ -11,6 +11,21 @@
   <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet" type="text/css">
 
+  <script id="personal-info-template" type="text/x-handlebars-template">
+      <h3> Personal Information </h3>
+      <label>First Name</label><input class="user-info" type="text" name="firstName" value="{{firstName}}">
+      <label>Last Name</label><input class="user-info" type="text" name="lastName" value="{{lastName}}">
+      <label>Email</label><input class="user-info" type="email" name="email" value="{{email}}">
+      <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone" value="{{primaryPhone}}">
+      <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone" value="{{secondaryPhone}}">
+      <h4> Address </h4>
+      <label>Address Line 1</label><input class="user-info" type="text" name="lineOne" value="{{lineOne}}">
+      <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo" value="{{lineTwo}}">
+      <label>City</label><input class="user-info" type="text" name="city" value="{{city}}">
+      <label>State</label><input class="user-info" type="text" name="state" value="{{state}}">
+      <label>Postal Code</label><input class="user-info" type="text" name="zip" value="{{zip}}">
+      <button type="submit" id="user-info">Submit</button>
+  </script>
 
   <script id="check-box-template" type="text/x-handlebars-template">
     <div class="flexbox">
@@ -155,20 +170,7 @@
         </section>
 
         <section class="flexbox edit-plan main-sec" id="edit-plan">
-          <form class="user-information sub-sec">
-            <h3> Personal Information </h3>
-            <label>First Name</label><input class="user-info" type="text" name="firstName">
-            <label>Last Name</label><input class="user-info" type="text" name="lastName">
-            <label>Email</label><input class="user-info" type="email" name="email">
-            <label>Primary Phone</label><input class="user-info" type="tel" name="primaryPhone">
-            <label>Secondary Phone</label><input class="user-info" type="tel" name="secondaryPhone">
-            <h4> Address </h4>
-            <label>Address Line 1</label><input class="user-info" type="text" name="lineOne">
-            <label>Address Line 2</label><input class="user-info" type="text" name="lineTwo">
-            <label>City</label><input class="user-info" type="text" name="city">
-            <label>State</label><input class="user-info" type="text" name="state">
-            <label>Postal Code</label><input class="user-info" type="text" name="zip">
-            <button type="submit" id="user-info">Submit</button>
+          <form class="user-information sub-sec" id="personal-info">
           </form>
           <form id="emergenecy-button" class="sub-sec">
             <button class="emergency-info" type="submit">Create Household Member</button>

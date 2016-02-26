@@ -12,6 +12,7 @@
       });
   };
 
+
   userInput.toHtml = function(ele, id) {
     var template = Handlebars.compile($(id).text());
     return template(ele);
@@ -92,6 +93,9 @@
     CurrentUser.saveData(userData);
     window.location = '/home';
   });
+
+  CurrentUser.all = (JSON.parse(localStorage.CurrentUser));
+  $('#personal-info').append(userInput.toHtml(CurrentUser.all, '#personal-info-template'));
 
   module.userInput = userInput;
 }(window));
