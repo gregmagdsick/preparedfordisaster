@@ -32,7 +32,7 @@
   $('#rally-button').on('submit', function(e) {
     e.preventDefault();
     $('#rally-button').hide();
-    $('#rally-point').show();
+    $('#rally').show();
   });
 
   $('#emergenecy-info').on('submit', function(e) {
@@ -65,6 +65,7 @@
     CurrentUser.saveData(userData);
   });
 
+  $('#rally').hide();
   $('.rally-point').on('submit', function(e) {
     e.preventDefault();
     if (!CurrentUser.all.rallyInfo) {
