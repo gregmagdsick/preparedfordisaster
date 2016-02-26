@@ -1,11 +1,8 @@
 (function(module) {
   'use strict';
-  //***test variables and functions, to be deleted***
 
-
-  // ***end delete test section***
   CurrentUser.all = {};
-  //creates a new object for the user with properties to match data input
+
   function CurrentUser(ops) {
     Object.keys(ops).forEach(function(e, index, keys) {
       this[e] = ops[e];

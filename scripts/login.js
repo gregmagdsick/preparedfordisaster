@@ -66,7 +66,6 @@
 
   $('#login').on('click',login.newLogin);
 
-//Verifies user is logged in,
   login.authDataCallback = function(authData) {
     if (authData) {
       userData.uid = authData.uid;
@@ -76,7 +75,6 @@
     } else {
       window.location = '/';
     }
-    // CurrentUser.pullData(authData.uid);
   };
 
   login.check = function(ctx, next){
