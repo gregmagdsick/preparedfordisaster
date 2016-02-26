@@ -23,23 +23,23 @@ server.listen(port, function() {
 // var io = require('socket.io')(server);
 
 var options = {
-    service: 'gmail',
-    auth: {
-        user: 'info.preparedfordisaster',
-        pass: 'Code16Disaster301'
-    }
-  };
+  service: 'gmail',
+  auth: {
+    user: 'info.preparedfordisaster',
+    pass: 'Code16Disaster301'
+  }
+};
 var transporter = nodemailer.createTransport(smtpTransport(options));
 
 io.sockets.on('connection', function(socket) {
   socket.on('emailResponse', function (mailOptions) {
 
     transporter.sendMail(mailOptions, function(error, response){
-        if(error){
-            console.log(error);
-        }else{
-            console.log("Message sent: " + response.message);
-        }
+      if(error){
+        console.log(error);
+      }else{
+        console.log('Message sent: ' + response.message);
+      }
     });
   });
 });
