@@ -33,6 +33,35 @@ header {
   }
 }
 
+.additional-resources {
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 5%;
+
+  h3 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      a {
+        text-decoration: none;
+        color: rgb(233, 0, 0);
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .specific-disasters {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
 .base-kit {
   margin: 1% 3%;
 

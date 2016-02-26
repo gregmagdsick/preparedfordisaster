@@ -26,7 +26,7 @@
     e.preventDefault();
     $('#emergenecy-button').hide();
     $('#emergenecy-info').show().append(userInput.toHtml('', '#emergency-contact-template'));
-    base64test.handle();
+    // base64test.handle();
   });
 
   $('#rally-button').on('submit', function(e) {
