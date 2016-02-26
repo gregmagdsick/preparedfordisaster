@@ -3,7 +3,7 @@ CodeFellows 301 level final project for creating a single page web app that help
 
 This plan was created by Joe McClenahan, Phillip Nguyen, Rick Stoner and Greg Magdsick
 
-Technologies used: Firebase, JavaScript, jQuery, gmailAPI, page.js, Node.js
+Technologies used: Firebase, JavaScript, jQuery, handlebars, page.js, Node.js, nodemailer, socket.io
 
 Logo created at logomakr.com
 http://logomakr.com/1AF6l5
