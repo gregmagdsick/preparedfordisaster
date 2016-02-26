@@ -4,6 +4,9 @@ page('/',
 page('/login',
   controller.login);
 
+page('/logout',
+  controller.logout);
+
 page('/register',
   controller.register);
 

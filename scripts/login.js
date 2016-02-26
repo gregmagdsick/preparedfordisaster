@@ -71,15 +71,21 @@
     if (authData) {
       userData.uid = authData.uid;
       module.userData = userData.uid;
+      CurrentUser.pullData(authData.uid);
+      // window.location = '/home';
     } else {
-      window.location = '/login';
+      window.location = '/';
     }
-    CurrentUser.pullData(authData.uid);
+    // CurrentUser.pullData(authData.uid);
   };
 
   login.check = function(ctx, next){
     var ref = new Firebase('https://blinding-fire-6623.firebaseio.com');
     ref.onAuth(login.authDataCallback);
+  };
+
+  login.logout = function() {
+    ref.unauth();
   };
 
   module.login = login;
