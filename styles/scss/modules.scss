@@ -1,5 +1,5 @@
 $margin: 0px 30px 30px 30px;
-$background-color: white;
+$background-color: rgba(255, 255, 255, 0.9);
 $text-color: black;
 $our-dark-green: #4BB612;
 $our-red: #E90000;
@@ -7,12 +7,19 @@ $our-light-green: #3BEC3B;
 $our-orange: #B64212;
 $our-brown: #834B34;
 
+h1 {
+  width: 100%;
+  margin: 0;
+  padding: 0px 0px 5px 0px;
+  color: white;
+  font-size: 2.5em;
+  display: block;
+  text-align: center;
+  background-color: $our-dark-green;
+  border-bottom: 1px solid white;
+}
+
 header {
-  h1 {
-    margin-left: 3%;
-    color: white;
-    font-size: 2.5em;
-  }
   a{
     margin-left:3%;
     img {
@@ -41,10 +48,19 @@ header {
   }
 }
 
+.about-box {
+  margin: 0 10%;
+  width: 80%;
+  background-color: $background-color;
+
+}
+
 .additional-resources {
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 5%;
+  margin: 0 10%;
+  width: 80%;
+  background-color: $background-color;
 
   h3 {
     font-size: 2em;

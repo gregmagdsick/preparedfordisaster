@@ -1,5 +1,4 @@
 body {
-  background-color: linear-gradient(45deg, rgba(182, 66, 18, 0.8) 0%, rgba(233, 0, 0, 0.4) 100%);
   font-family: 'Arimo', sans-serif;
   background: url("../images/gloomy.jpeg");
   background-size: cover;
@@ -8,6 +7,9 @@ body {
 header {
   justify-content: space-between;
   align-items: center;
-  font-family: 'Sanchez', serif; }
+  font-family: 'Sanchez', serif;
+  /*border-bottom: 1px white;*/
+  width: 100%;
+  background-color: #4BB612; }
 
 /*# sourceMappingURL=base.css.map */

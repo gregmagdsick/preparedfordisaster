@@ -1,7 +1,14 @@
-header h1 {
-  margin-left: 3%;
+h1 {
+  width: 100%;
+  margin: 0;
+  padding: 0px 0px 5px 0px;
   color: white;
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  display: block;
+  text-align: center;
+  background-color: #4BB612;
+  border-bottom: 1px solid white; }
+
 header a {
   margin-left: 3%; }
   header a img {
@@ -20,10 +27,17 @@ header nav {
         color: white;
         font-size: 1.5em; }
 
+.about-box {
+  margin: 0 10%;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.9); }
+
 .additional-resources {
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 5%; }
+  margin: 0 10%;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.9); }
   .additional-resources h3 {
     font-size: 2em;
     text-align: center; }
