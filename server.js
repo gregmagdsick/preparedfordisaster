@@ -18,10 +18,6 @@ server.listen(port, function() {
   console.log('Server started on port ' + port + '!');
 });
 
-// var nodemailer = require('nodemailer');
-// var smtpTransport = require('nodemailer-smtp-transport');
-// var io = require('socket.io')(server);
-
 var options = {
   service: 'gmail',
   auth: {
