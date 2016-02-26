@@ -11,9 +11,6 @@ Flame graphic by <a href="http://www.freepik.com/">Freepik</a>
 and Solid graphic by <a href="http://www.greepit.com">Sarfraz Shoukat</a> and
 People graphic by <a href="http://picol.org">Picol</a> from <a href="http://www.flaticon.com/">Flaticon</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a>
 
-JS for Image upload to Firebase courtesy of:
-http://jsfiddle.net/handtrix/xztfbx1m/
-
 The scope of this project is outlined in the user stories below:
 MVP:
   As a user I want to:
