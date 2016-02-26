@@ -95,7 +95,9 @@
     window.location = '/home';
   });
 
-  CurrentUser.all = (JSON.parse(localStorage.CurrentUser));
+  if(localStorage.CurrentUser){
+    CurrentUser.all = (JSON.parse(localStorage.CurrentUser));
+  }
   $('#personal-info').append(userInput.toHtml(CurrentUser.all, '#personal-info-template'));
 
   module.userInput = userInput;
