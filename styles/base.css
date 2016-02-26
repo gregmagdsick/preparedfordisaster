@@ -1,9 +1,13 @@
 body {
   background-color: linear-gradient(45deg, rgba(182, 66, 18, 0.8) 0%, rgba(233, 0, 0, 0.4) 100%);
-  font-family: 'Arimo', sans-serif; }
+  font-family: 'Arimo', sans-serif;
+  background: url("../images/gloomy.jpeg");
+  background-size: cover;
+  background-attachment: fixed; }
 
 header {
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  font-family: 'Sanchez', serif; }
 
 /*# sourceMappingURL=base.css.map */
