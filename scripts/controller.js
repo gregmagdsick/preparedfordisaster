@@ -2,12 +2,16 @@
   controller = {};
 
   controller.landing = function() {
-    login.check();
+    // login.check();
     $('#landing-page').show().siblings().hide();
   };
 
   controller.login = function() {
     $('#login-page').show().siblings().hide();
+  };
+
+  controller.logout = function() {
+    login.logout();
   };
 
   controller.register = function() {
@@ -32,9 +36,6 @@
     login.check();
     $('#edit-plan').show().siblings().hide();
   };
-
-
-
 
   module.controller = controller;
 })(window);

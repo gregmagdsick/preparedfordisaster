@@ -19,9 +19,9 @@
         $('.emergency-contact-plan').remove();
         CurrentUser.all = new CurrentUser(snapshot.val());
         $('#homepage-plan').append(home.render(CurrentUser.all, '#final-emergency-plan-form-template'));
-        if(CurrentUser.all.lovedOnes){
+        if (CurrentUser.all.lovedOnes) {
           CurrentUser.all.lovedOnes.forEach(function(a) {$('#homepage-plan').append(home.render(a, '#final-emergency-plan-lovedones-template'));
-          });
+        });
         }
         $('#homepage-plan').append(home.render(CurrentUser.all, '#final-emergency-plan-rally-template'));
         $('#homepage-plan').append(home.render(CurrentUser.all, '#final-emergency-plan-userkit-template'));
