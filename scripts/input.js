@@ -49,7 +49,7 @@
     CurrentUser.all.lovedOnes.push(array);
     $('.emer-info').val('');
     $('#emergenecy-info').prepend('<p>' + array.firstName + ' ' + array.lastName + ' added</p>');
-    success('#emergenecy-info')
+    success('#emergenecy-info');
     CurrentUser.saveData(userData);
   });
 
