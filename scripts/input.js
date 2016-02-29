@@ -8,7 +8,7 @@
         userInput.all.forEach(function(ele) {
           $('.base-kit').append(userInput.toHtml(ele, '#check-box-template'));
         });
-        $('.base-kit').append('<button type="submit">Submit</button>');
+        $('.base-kit').append('<button type="submit">Save all Data</button>');
       });
   };
 
@@ -36,8 +36,7 @@
     $('#rally').show();
   });
 
-  $('#emergenecy-info').on('submit', function(e) {
-    e.preventDefault();
+  var saveLovedOnes = function() {
     if (!CurrentUser.all.lovedOnes) {
       CurrentUser.all.lovedOnes = [];
     }
@@ -51,17 +50,25 @@
     $('.emer-info').val('');
     $('#emergenecy-info').prepend('<p>' + array.firstName + ' ' + array.lastName + ' added</p>');
     success('#emergenecy-info');
+  };
+
+  $('#emergenecy-info').on('submit', function(e) {
+    e.preventDefault();
+    saveLovedOnes();
     CurrentUser.saveData(userData);
   });
 
-  $('.user-information').on('submit', function(e) {
-    e.preventDefault();
+  var saveUserInfo = function() {
     $('.user-info').map(function() {
       if (this.value && this.value !== 'submit') {
         CurrentUser.all[this.name] = this.value;
       }
     });
-    $('.user-info').val('');
+  };
+
+  $('.user-information').on('submit', function(e) {
+    e.preventDefault();
+    saveUserInfo();
     success('.user-information');
     CurrentUser.saveData(userData);
   });
@@ -91,6 +98,7 @@
     CurrentUser.all.userKit = kitArray;
     $('.user-kit').removeAttr('checked');
     success('.base-kit');
+    saveLovedOnes();
     CurrentUser.saveData(userData);
     window.location = '/home';
   });
