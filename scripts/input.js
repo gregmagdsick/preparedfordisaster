@@ -85,7 +85,7 @@
   $('.base-kit').on('submit', function(e) {
     e.preventDefault();
     var kitArray = [];
-    $(':checkbox:checked').each(function(acc) {
+    $(':checkbox:not(:checked)').each(function(acc) {
       kitArray.push(this.value);
     });
     CurrentUser.all.userKit = kitArray;
