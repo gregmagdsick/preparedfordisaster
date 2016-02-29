@@ -73,9 +73,7 @@
     CurrentUser.saveData(userData);
   });
 
-  $('#rally').hide();
-  $('.rally-point').on('submit', function(e) {
-    e.preventDefault();
+  var saveRallyInfo = function() {
     if (!CurrentUser.all.rallyInfo) {
       CurrentUser.all.rallyInfo = [];
     }
@@ -84,7 +82,12 @@
         CurrentUser.all.rallyInfo[this.name] = this.value;
       }
     });
-    $('.rally-info').val('');
+  };
+
+  $('#rally').hide();
+  $('.rally-point').on('submit', function(e) {
+    e.preventDefault();
+    saveRallyInfo();
     success('.rally-point');
     CurrentUser.saveData(userData);
   });
@@ -99,6 +102,8 @@
     $('.user-kit').removeAttr('checked');
     success('.base-kit');
     saveLovedOnes();
+    saveUserInfo();
+    saveRallyInfo();
     CurrentUser.saveData(userData);
     window.location = '/home';
   });
