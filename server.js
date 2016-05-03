@@ -21,8 +21,8 @@ server.listen(port, function() {
 var options = {
   service: 'gmail',
   auth: {
-    user: 'info.preparedfordisaster',
-    pass: 'Code16Disaster301'
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PWD
   }
 };
 var transporter = nodemailer.createTransport(smtpTransport(options));
